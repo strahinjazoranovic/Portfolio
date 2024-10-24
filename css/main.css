@@ -67,11 +67,7 @@ li a {
   padding: 20px;
 }
 
-.gallerij1 {
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-}
+
 
 .gallerij2 {
   display: flex;
@@ -124,8 +120,6 @@ form {
 }
 
 
-
-
 footer {
   height: 500px;
   padding-top: 100px;
@@ -164,21 +158,6 @@ footer {
   height: 800px;
 }
 
-.ervaringfotos{
-  width: 800px;
-  height: 500px;
-}
-
-.ervaring1{
-  border: 3px solid white;
-  border-radius: 15px;
-  margin-top: 80px;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 20px;
-  margin-bottom: 50px;
-}
-
 #koptekst1{
   margin: 0px;
   color: blueviolet;
@@ -207,5 +186,62 @@ footer {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 40px;
   color: white;
+  text-decoration: none;
 }
 
+#ervaring img {
+  max-width: 100%;
+  height: auto;
+}
+
+#ervaring1 {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+#ervaring {
+  flex: 1 1 300px;  
+  text-align: center;  
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+@media (max-width: 600px) {
+  #ervaring1 {
+    flex-direction: column; 
+    align-items: center;  
+  }
+
+  #ervaring {
+    width: 90%;  
+    padding: 20px;
+  }
+
+  footer{
+    margin-top: 100px;
+  }
+
+  .gallerij1 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+  }
+}
+
+.gallerij1 {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+#jsfoto{
+  border-radius: 500px;
+}
