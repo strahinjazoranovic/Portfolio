@@ -255,6 +255,10 @@ img{
     justify-content: center;
   }
 
+  h1{
+    font-size: 24px;
+  }
+
   .gallerij1 {
     display: flex;
     flex-direction: column; 
