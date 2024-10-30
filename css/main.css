@@ -223,13 +223,33 @@ img{
     align-items: center;  
   }
 
+  
+ #foto1{
+    width: 90%;
+ }
+
+ .tekst{
+  width: 90%;
+  padding: 0px;
+ }
+
+ .linkfoto{
+  margin: 15px;
+ }
+ #intro{
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+ }
+
   #ervaring {
     width: 90%;  
     padding: 20px;
   }
 
   footer{
-    margin-top: 100px;
+    margin-top: 150px;
   }
 
   .gallerij1 {
