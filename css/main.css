@@ -78,7 +78,7 @@ li a {
 
 #navbar a:hover {
   background-color: blueviolet;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 #navbar1 a:hover {
@@ -218,6 +218,7 @@ footer {
   margin-right: 20px;
   height: 100px;
   width: 100px;
+  animation: wiggle 5s linear;
 }
 
 
@@ -295,6 +296,39 @@ img{
   }
 }
 
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+@media (max-width: 1060px) {
+  #intro{
+      margin-top: 75px;
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+  }
+}
+
 @media (max-width: 1200px) {
   #ervaring1 {
     flex-direction: column; 
@@ -327,12 +361,7 @@ img{
  .linkfoto{
   margin: 15px;
  }
- #intro{
-    margin-top: 75px;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
- }
+
 
   #ervaring {
     width: 90%;  
