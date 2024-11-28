@@ -4,39 +4,33 @@ body {
 }
 
 #gradientmain {
-  background-image: linear-gradient(black 3%, #8a2be2, black 75%);
-  min-height: 100vh; 
-  width: 100%;
-}
-
-#gradientcv {
-  background-image: linear-gradient(black 3%, #8a2be2, black 75%);
+  background-image: linear-gradient(black 5%, #8a2be2, black 75%);
   min-height: 100vh; 
   width: 100%;
 }
 
 #gradientervaring {
-  background-image: linear-gradient(black 3%, #8a2be2, black 75%);
+  background-image: linear-gradient(black 5%, #8a2be2, black 74%);
   min-height: 100vh; 
   width: 100%;
 }
 
 #gradientproject {
-  background-image: linear-gradient(black 1%, #8a2be2, black 85%);
-  min-height: 100vh; 
+  background-image: linear-gradient(black 3%, #8a2be2, black 86%);
+  min-height: 110vh; 
   width: 100%;
 }
 
 .tekst {
   width: 45%;
   padding-top: 100px;
-  font-size: 30px;
+  font-size: 25px;
   color: white;
   animation-name: real;
   animation-duration: 3s;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
+ 
 ul {
   list-style-type: none;
   width: 100%;
@@ -66,25 +60,10 @@ li a {
   animation-duration: 2s;
 }
 
-#navbar1 {
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: black;
-  width: 100%;
-  height: 60px;
-}
-
 #navbar a:hover {
-  background-color: blueviolet;
-  border-radius: 3px;
+  color: #8a2be2;
 }
 
-#navbar1 a:hover {
-  background-color: blueviolet;
-  border-radius: 5px;
-}
 #koptekst {
   color: blueviolet;
   margin-top: 60px;
@@ -116,7 +95,7 @@ li a {
 }
 
 #stra {
-  font-size: 50px;
+  font-size: 60px;
   color: black;
   animation-name: real;
   animation-duration: 5s;
@@ -201,7 +180,10 @@ footer {
 }
 
 #content1 {
+  display: flex;
+  justify-content: center;
   height: 800px;
+  margin-top: 60px;
 }
 
 #koptekst1{
@@ -218,7 +200,7 @@ footer {
   margin-right: 20px;
   height: 100px;
   width: 100px;
-  animation: wiggle 5s linear;
+  animation: scale 2s;
 }
 
 
@@ -251,8 +233,22 @@ img{
   justify-content: space-around;
   gap: 20px;
   padding: 50px;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 250px;
+  padding-right: 250px;
+  margin-bottom: 10px;
+  animation-name: Slidein;
+  animation-duration: 2s;
+}
+
+#ervaring2 {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: space-around;
+  gap: 20px;
+  padding: 50px;
+  padding-left: 250px;
+  padding-right: 250px;
+  margin-bottom: 10px;
 }
 
 #ervaring {
@@ -266,8 +262,20 @@ img{
   border: 3px solid white;
   border-radius: 20px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  animation-name: real;
-  animation-duration: 3s;
+  animation: Slidein 2s ease-in;
+}
+
+
+
+
+@keyframes Slidein {
+  from {
+    transform: translateX(-900px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 @keyframes real {
@@ -286,38 +294,9 @@ img{
   }
 }
 
-@keyframes top {
-  from {
-    margin-top: -60px;
-  }
-
-  to {
-    margin-top: 0px;
-  }
-}
-
-@keyframes wiggle {
-  0%, 7% {
-    transform: rotateZ(0);
-  }
-  15% {
-    transform: rotateZ(-15deg);
-  }
-  20% {
-    transform: rotateZ(10deg);
-  }
-  25% {
-    transform: rotateZ(-10deg);
-  }
-  30% {
-    transform: rotateZ(6deg);
-  }
-  35% {
-    transform: rotateZ(-4deg);
-  }
-  40%, 100% {
-    transform: rotateZ(0);
-  }
+@keyframes scale {
+  from {scale: 80%;}
+  to {scale: 100%;}
 }
 
 @media (max-width: 1060px) {
@@ -329,7 +308,7 @@ img{
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   #ervaring1 {
     flex-direction: column; 
     align-items: center;
