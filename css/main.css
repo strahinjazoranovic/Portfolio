@@ -16,7 +16,7 @@ body {
 }
 
 #gradientproject {
-  background-image: linear-gradient(black 3%, #8a2be2, black 86%);
+  background-image: linear-gradient(black 3%, #8a2be2, black 78%);
   min-height: 110vh; 
   width: 100%;
 }
@@ -244,8 +244,8 @@ img{
   justify-content:space-between;
   gap: 20px;
   padding: 50px;
-  padding-left: 250px;
-  padding-right: 250px;
+  padding-left: 200px;
+  padding-right: 200px;
   animation: SlideinLeft 2s forwards;
 }
 
