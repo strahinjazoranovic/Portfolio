@@ -4,13 +4,13 @@ body {
 }
 
 #gradientmain {
-  background-image: linear-gradient(black 5%, #8a2be2, black 75%);
+  background-image: linear-gradient(black 3%, #8a2be2, black 71%);
   min-height: 100vh; 
   width: 100%;
 }
 
 #gradientervaring {
-  background-image: linear-gradient(black 5%, #8a2be2, black 74%);
+  background-image: linear-gradient(black 3%, #8a2be2, black 71%);
   min-height: 100vh; 
   width: 100%;
 }
@@ -45,7 +45,7 @@ li a {
   text-align: right;
   text-decoration: none;
   color: white;
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
 #navbar {
@@ -54,27 +54,13 @@ li a {
   justify-content: space-around;
   width: 100%;
   height: 60px;
-  animation: SlideinTop1 1.2s ;
-}
-
-#navbar1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-  height: 60px;
-  animation: SlideinLeft1 2s ;
+  animation: SlideinTop1 1.2s;
 }
 
 #navbar a:hover{
   color: #8a2be2;
+  transform: translateY(-1px);
 }
-
-#navbar1 a:hover {
-  color: #8a2be2;
-}
-
-
 
 #koptekst {
   color: blueviolet;
@@ -83,10 +69,9 @@ li a {
   text-align: center;
   margin-left: 10px;
   font-size: 80px;
-  animation: SlideinLeft 2s;
+  animation: SlideinLeft 1s;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
 
 .gallerij {
   border: 3px solid white;
@@ -154,8 +139,8 @@ form {
 }
 
 footer {
-  height: 200px;
-  padding-top: 100px;
+  height: 240px;
+  padding-top: 50px;
   padding-bottom: 100px;
   padding-left: 50px;
   padding-right: 50px;
@@ -262,6 +247,10 @@ img{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+#copyright {
+  text-align: center;
+}
+
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -317,6 +306,15 @@ img{
   }
 }
 
+@keyframes navbar {
+  from{
+    transform: translateX(0px)
+  }
+
+  to {
+    transform: translateX(-20px)
+  }
+}
 @keyframes SlideinTop {
   from {
     transform: translateY(-1000px);
@@ -412,7 +410,8 @@ img{
 
 
  .linkfoto{
-  margin: 15px;
+  margin: 10px;
+  width: 90%;
  }
 
 
