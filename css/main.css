@@ -21,13 +21,13 @@ body {
   width: 100%;
 }
 
-.tekst {
+#tekst {
   width: 45%;
   padding-top: 100px;
   font-size: 25px;
   color: white;
-  animation-name: real;
-  animation-duration: 3s;
+  text-align: center;
+  animation: fade 3s;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
  
@@ -59,7 +59,7 @@ li a {
 
 #navbar a:hover{
   color: #8a2be2;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 #koptekst {
@@ -67,7 +67,6 @@ li a {
   margin: 0px;
   margin-bottom: 40px;
   text-align: center;
-  margin-left: 10px;
   font-size: 80px;
   animation: SlideinLeft 1s;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -191,8 +190,8 @@ footer {
 
 .linkfoto{
   border-radius: 50px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   height: 100px;
   width: 100px;
   animation: scale 2s;
@@ -202,7 +201,7 @@ footer {
 #foto2{
   margin-top: 40px;
   display: flex;
-  justify-content: start;
+  justify-content:space-evenly;
 }
 
 .fototekst{
@@ -227,11 +226,12 @@ img{
   display: flex;
   flex-wrap: wrap;  
   justify-content:space-between;
-  gap: 20px;
+  gap: 40px;
   padding: 50px;
   padding-left: 200px;
   padding-right: 200px;
-  animation: SlideinLeft 2s forwards;
+  margin-bottom: 50px;
+  animation: SlideinLeft 1.4s forwards;
 }
 
 #ervaring {
@@ -347,7 +347,7 @@ img{
   }
 }
 
-@keyframes real {
+@keyframes fade {
   from {opacity: 0;}
   to {opacity: 1;}
 }
@@ -373,39 +373,49 @@ img{
       margin-top: 75px;
       display: flex;
       flex-direction: column; 
-      align-items: center;
+      align-items: center;  
+      animation: fade 2s;
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
   #ervaring1 {
     flex-direction: column; 
     align-items: center;
     padding: 0px;
-    gap: 40px;
-    margin-bottom: 50px;
-    padding-left: 150px;
-    padding-right: 150px;  
+    padding-left: 200px;
+    padding-right: 200px;   
   }
 }
 
-@media (max-width: 600px) {
-  #ervaring1 {
+@media (max-width: 750px) {
+  .fototekst{
+    opacity: 0;
+   }
+
+  #koptekst {
+    animation: fade 2s;
+  }
+   
+   #ervaring1 {
     flex-direction: column; 
     align-items: center;
     padding: 0px;
     padding-left: 50px;
     padding-right: 50px;  
+    animation: fade 2s; 
   }
-
-  
- #foto1{
+}
+ 
+@media (max-width: 600px) {
+  #foto1{
     width: 90%;
  }
 
- .tekst{
+ #tekst{
   width: 90%;
   padding: 0px;
+  text-align: center;
  }
 
 
@@ -431,7 +441,7 @@ img{
     font-size: 24px;
   } 
 }
-
+ 
 #jsfoto{
   border-radius: 500px;
 }
