@@ -32,6 +32,12 @@ html {
   animation: fade 3s;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+#tekstervaring {
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 20px;
+}
  
 ul {
   list-style-type: none;
@@ -71,11 +77,43 @@ li a {
 #koptekst {
   color: black;
   margin: 0px;
-  padding-top: 500px;
+  padding-top: 250px;
   text-align: center;
-  font-size: 50px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 32px;
+  font-family: Arial, Helvetica, sans-serif;
   animation: fade 2s;
+}
+
+#koptekst1 {
+  color: black;
+  padding-top: 500px;
+  margin: 0px;
+  text-align: center;
+  font-size: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+  animation: fade 2s;
+}
+
+.taaljs {
+  color: yellow;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.taalcss {
+  color: lightblue;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.taalhtml {
+  color: orange;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.talen{
+  display: block;
 }
 
 .gallerij {
@@ -216,7 +254,7 @@ img{
   opacity: 0;
   filter: blur(8px);
   transform: translateX(100%);
-  transition: all 2s;
+  transition: all 1s;
   position: relative;
   display: flex;
   flex-wrap: wrap;  
@@ -393,8 +431,4 @@ img{
   h1{
     font-size: 20px;
   } 
-}
- 
-#jsfoto{
-  border-radius: 500px;
 }
