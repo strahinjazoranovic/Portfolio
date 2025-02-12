@@ -3,8 +3,8 @@ html {
   scroll-behavior: smooth;
   margin: 0px;
   padding: 0px;
-  background-color: rgb(25, 25, 25);
-  font-family: 'Poppins',sans-serif;
+  background-color: rgb(40, 40, 40);
+  font-family: "Poppins", sans-serif;
 }
 
 #version {
@@ -31,7 +31,6 @@ html {
   padding-right: 20px;
   padding-bottom: 5px;
 }
-
 
 /* Navbar */
 #navbar {
@@ -108,7 +107,6 @@ html {
   font-size: 80px;
   color: black;
   text-align: center;
-;
 }
 
 /* Div voor de startscherm */
@@ -162,9 +160,18 @@ footer {
   font-size: 40px;
   color: white;
   text-decoration: none;
-  margin-top: 0px;
-  margin-bottom: 20px;
+  margin:10px
 }
+
+/* Tekst voor de projecten */
+.fototekst1 {
+  text-align: center;
+  font-size: 18px;  
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+}
+
 
 /* ervaring images */
 #ervaring img {
@@ -216,6 +223,10 @@ img {
   padding: 20px;
   border-radius: 20px;
   background-color: black;
+  border-radius: 20px;
+  box-shadow: 9px 9px 100px #9f9f9f, -9px -9px 100px;
+  backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur(20px);
 }
 
 /* Copyright tekst in de footer */
@@ -223,45 +234,55 @@ img {
   text-align: center;
 }
 
+
+/* Dit is de learnmore button */
+.boton-elegante {
+  padding: 15px 30px;
+  margin-bottom: 20px;
+  border: 2px solid #2c2c2c;
+  background-color: black;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+
+.boton-elegante::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25) 0%, 
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.boton-elegante:hover::after {
+  transform: scale(4);
+}
+
+.boton-elegante:hover {
+  border-color: #666666;
+  background: #292929;
+}
+
 /* Property dat wordt gebruikt voor de gradient */
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
-}
-
-/* Gradient animation*/
-#ervaring::after,
-#ervaring::before {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-image: conic-gradient(from var(--angle), transparent 50%, white, lightgreen,white);
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  z-index: -1;
-  opacity: 1;
-  padding: 4px;
-  border-radius: 20px;
-  animation: 10s spin linear infinite;
-}
-
-/* Gradient animation */
-#ervaring::before {
-  filter: blur(1.5rem)
-}
-
-/* Animations */
-@keyframes spin {
-  from {
-    --angle: 0deg;
-  }
-
-  to {
-    --angle: 360deg;
-  }
 }
 
 @keyframes SlideinTop {
@@ -298,7 +319,6 @@ img {
   }
 }
 
-
 @keyframes scale {
   from {
     scale: 50%;
@@ -319,7 +339,6 @@ img {
 }
 
 @media (max-width: 1150px) {
-
   .show,
   .hidden {
     padding-left: 200px;
@@ -335,7 +354,6 @@ img {
 }
 
 @media (max-width: 800px) {
-
   .show,
   .hidden {
     padding-left: 60px;
@@ -356,7 +374,6 @@ img {
     width: 90%;
     text-align: center;
   }
-
 
   #stra {
     font-size: 50px;
