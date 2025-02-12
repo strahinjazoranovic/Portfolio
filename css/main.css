@@ -3,18 +3,31 @@ html {
   scroll-behavior: smooth;
   margin: 0px;
   padding: 0px;
-  background-color: rgb(40, 40, 40);
+  background: linear-gradient(135deg, rgb(86, 0, 86), #feb47b);
   font-family: "Poppins", sans-serif;
 }
 
+/* Dit is id voor de versie nummer rechts boven */
 #version {
   text-align: end;
   padding-top: 5px;
   padding-right: 20px;
   color: white;
-  filter: blur(1px);
   margin: 0px;
   font-size: 20px;
+  animation: Slideinleft 0.8s;
+}
+
+/* Dit is de id voor de introductie tekst */
+#tekst {
+  text-align: center;
+}
+
+/* Dit is de id voor software developer */
+#tekst1 {
+  font-size: 40px;
+  color: white;
+  margin-top: 5px;
 }
 
 /* Dit is zodat je niet de scrollbar ziet */
@@ -61,7 +74,7 @@ html {
 #koptekst {
   color: black;
   margin: 0px;
-  padding-top: 350px;
+  padding-top: 150px;
   text-align: center;
   font-size: 40px;
   animation: fade 2s;
@@ -70,13 +83,23 @@ html {
 /* Koptekst voor de projecten */
 #koptekst1 {
   color: black;
-  padding-top: 650px;
+  padding-top: 250px;
   margin: 0px;
   text-align: center;
   font-size: 40px;
   animation: fade 2s;
 }
 
+/* Koptekst voor de projecten */
+#koptekst2 {
+  color: black;
+  padding-top: 40
+  +px;
+  margin: 0px;
+  text-align: center;
+  font-size: 40px;
+  animation: SlideinRight 1.2s;
+}
 /* tekst voor javascript gebruik in een project */
 .taaljs {
   color: yellow;
@@ -112,8 +135,8 @@ html {
 /* Div voor de startscherm */
 #intro {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   animation: SlideinTop 1s;
 }
@@ -149,7 +172,7 @@ footer {
 
 /* Div voor de icons op de homepage */
 #introfotos {
-  margin-top: 40px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -212,6 +235,21 @@ img {
   padding-right: 200px;
 }
 
+/* Showed animation made with javascript for a different page*/
+.show1 {
+  opacity: 1;
+  filter: blur(0px);
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 50px;
+  padding-left: 280px;
+  padding-right: 280px;
+  animation: SlideinRight 1.2s;
+}
+
 /* Ervaring */
 #ervaring {
   position: relative;
@@ -224,7 +262,7 @@ img {
   border-radius: 20px;
   background-color: black;
   border-radius: 20px;
-  box-shadow: 9px 9px 100px #9f9f9f, -9px -9px 100px;
+  box-shadow: 9px 9px 100px black, 10px 10px 25px;
   backdrop-filter: blur( 20px );
 -webkit-backdrop-filter: blur(20px);
 }
@@ -297,13 +335,27 @@ img {
   }
 }
 
+@keyframes SlideinRight {
+  from {
+    transform: translateX(-2000px);
+    filter: blur(10px);
+  }
+
+  to {
+    filter: blur(0px);
+    transform: translateX(0);
+  }
+}
+
 @keyframes Slideinleft {
   from {
+    scale: 72%;
     transform: translateX(-100px);
     filter: blur(10px);
   }
 
   to {
+    scale: 100%;
     filter: blur(0px);
     transform: translateX(0);
   }
@@ -340,6 +392,7 @@ img {
 
 @media (max-width: 1150px) {
   .show,
+  .show1,
   .hidden {
     padding-left: 200px;
     padding-right: 200px;
@@ -355,6 +408,7 @@ img {
 
 @media (max-width: 800px) {
   .show,
+  .show1,
   .hidden {
     padding-left: 60px;
     padding-right: 60px;
