@@ -3,7 +3,7 @@ html {
   scroll-behavior: smooth;
   margin: 0px;
   padding: 0px;
-  background: linear-gradient(135deg, rgb(86, 0, 86), #feb47b);
+  background: rgb(40, 40, 40);
   font-family: "Poppins", sans-serif;
 }
 
@@ -65,8 +65,7 @@ html {
 
 /* Hover effects */
 #navbar a:hover,
-.linkfoto:hover,
-.linkfotogithub:hover {
+.linkfoto:hover {
   transform: translateY(-2px);
 }
 
@@ -93,32 +92,11 @@ html {
 /* Koptekst voor de projecten */
 #koptekst2 {
   color: black;
-  padding-top: 40
-  +px;
+  padding-top: 40px;
   margin: 0px;
   text-align: center;
   font-size: 40px;
   animation: SlideinRight 1.2s;
-}
-/* tekst voor javascript gebruik in een project */
-.taaljs {
-  color: yellow;
-  font-size: 20px;
-  margin: 10px;
-}
-
-/* tekst voor css gebruik in een project */
-.taalcss {
-  color: lightblue;
-  font-size: 20px;
-  margin: 10px;
-}
-
-/* tekst voor html gebruik in een project */
-.taalhtml {
-  color: orange;
-  font-size: 20px;
-  margin: 10px;
 }
 
 .tekstervaring {
@@ -160,8 +138,7 @@ footer {
 }
 
 /* Voor de icons op de homepage */
-.linkfoto,
-.linkfotogithub {
+.linkfoto {
   border-radius: 50px;
   margin-left: 10px;
   margin-right: 10px;
@@ -183,13 +160,13 @@ footer {
   font-size: 40px;
   color: white;
   text-decoration: none;
-  margin:10px
+  margin: 5px
 }
 
 /* Tekst voor de projecten */
 .fototekst1 {
   text-align: center;
-  font-size: 18px;  
+  font-size: 18px;
   color: white;
   text-decoration: none;
   margin: 10px;
@@ -217,8 +194,8 @@ img {
   justify-content: space-between;
   gap: 40px;
   padding: 50px;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 300px;
+  padding-right: 300px;
 }
 
 /* Showed animation made with javascript */
@@ -231,8 +208,8 @@ img {
   justify-content: space-between;
   gap: 40px;
   padding: 50px;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 300px;
+  padding-right: 300px;
 }
 
 /* Showed animation made with javascript for a different page*/
@@ -245,8 +222,8 @@ img {
   justify-content: space-between;
   gap: 40px;
   padding: 50px;
-  padding-left: 280px;
-  padding-right: 280px;
+  padding-left: 400px;
+  padding-right: 400px;
   animation: SlideinRight 1.2s;
 }
 
@@ -258,13 +235,13 @@ img {
   justify-content: space-between;
   flex: 1 1 100px;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   border-radius: 20px;
-  background-color: black;
-  border-radius: 20px;
-  box-shadow: 9px 9px 100px black, 10px 10px 25px;
-  backdrop-filter: blur( 20px );
--webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Copyright tekst in de footer */
@@ -298,11 +275,9 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.25) 0%, 
-    rgba(255, 255, 255, 0) 70%
-  );
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 70%);
   transform: scale(0);
   transition: transform 0.5s ease;
 }
@@ -391,6 +366,7 @@ img {
 }
 
 @media (max-width: 1150px) {
+
   .show,
   .show1,
   .hidden {
@@ -407,6 +383,7 @@ img {
 }
 
 @media (max-width: 800px) {
+
   .show,
   .show1,
   .hidden {
@@ -430,7 +407,11 @@ img {
   }
 
   #stra {
-    font-size: 50px;
+    font-size: 34px;
+  }
+
+  #tekst1 {
+    font-size: 17px;
   }
 
   .linkfoto {
