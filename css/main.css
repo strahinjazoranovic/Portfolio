@@ -1,9 +1,13 @@
+/* Dit is de css voor elke website */
+
+/* Main stuk */
 body,
 html {
   scroll-behavior: smooth;
   margin: 0px;
   padding: 0px;
-  background: rgb(60, 60, 60);
+  background: rgb(250, 250, 250);
+  color: black;
   font-family: "Poppins", sans-serif;
 }
 
@@ -12,10 +16,16 @@ html {
   text-align: end;
   padding-top: 5px;
   padding-right: 20px;
-  color: white;
+  color: blueviolet;
   margin: 0px;
   font-size: 20px;
   animation: Slideinleft 0.8s;
+}
+
+/* Dit is voor alle links */
+a {
+  text-decoration: none;
+  color: black;
 }
 
 /* Dit is de id voor de introductie tekst */
@@ -26,7 +36,7 @@ html {
 /* Dit is de id voor software developer */
 #tekst1 {
   font-size: 40px;
-  color: white;
+  color: black;
   margin-top: 5px;
 }
 
@@ -37,7 +47,7 @@ html {
 
 /* Dit is de DIV voor de tekst in projecten */
 .tekstervaring {
-  border: 2px solid white;
+  border: 2px solid black;
   border-radius: 20px;
   padding-top: 5px;
   padding-left: 20px;
@@ -56,11 +66,20 @@ html {
   left: 0;
   width: 100px;
   /* Adjust width as needed */
-  height: 100%;
+  height: 99%;
   /* Full height */
   z-index: 1000;
   /* Ensure it stays on top */
   animation: Slideinleft 1s;
+  margin-left: 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Hover effects */
@@ -69,9 +88,8 @@ html {
   transform: translateY(-2px);
 }
 
-/* Koptekst voor ervaring */
+/* Koptekst voor ervaring componenten */
 #koptekst {
-  color: black;
   margin: 0px;
   padding-top: 150px;
   text-align: center;
@@ -79,9 +97,8 @@ html {
   animation: fade 2s;
 }
 
-/* Koptekst voor de projecten */
+/* Koptekst voor de home pagina */
 #koptekst1 {
-  color: black;
   padding-top: 250px;
   margin: 0px;
   text-align: center;
@@ -89,9 +106,8 @@ html {
   animation: fade 2s;
 }
 
-/* Koptekst voor de projecten */
+/* Koptekst voor de projecten pagina */
 #koptekst2 {
-  color: black;
   padding-top: 40px;
   margin: 0px;
   text-align: center;
@@ -99,18 +115,19 @@ html {
   animation: SlideinRight 1.2s;
 }
 
+/* Tekst dat uitlegt waar een project over gaat */
 .tekstervaring {
   margin-top: 12px;
 }
 
-/* Tekst voor Strahinja Zoranovic */
+/* Tekst voor Strahinja Zoranovic die je op de start pagina ziet */
 #stra {
   font-size: 80px;
-  color: black;
+  color: blueviolet;
   text-align: center;
 }
 
-/* Div voor de startscherm */
+/* Center div voor de startscherm */
 #intro {
   display: flex;
   align-items: center;
@@ -119,25 +136,24 @@ html {
   animation: SlideinTop 1s;
 }
 
-/* Footer */
+/* Footer onderaan de pagina */
 footer {
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 60px;
-  margin-top: 600px;
+  margin-top: 200px;
   display: flex;
   justify-content: center;
   text-align: center;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  color: black;
   font-size: 18px;
   animation: bigger linear;
   animation-timeline: view();
   animation-range: entry 0;
 }
 
-/* Voor de icons op de homepage */
+/* Voor de icons op de start pagina */
 .linkfoto {
   border-radius: 50px;
   margin-left: 10px;
@@ -149,29 +165,26 @@ footer {
 
 /* Div voor de icons op de homepage */
 #introfotos {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   justify-content: space-evenly;
 }
 
-/* Tekst voor de projecten */
+/* Titel voor de projecten */
 .fototekst {
   text-align: center;
   font-size: 40px;
-  color: white;
   text-decoration: none;
-  margin: 5px
+  margin: 5px;
 }
 
-/* Tekst voor de projecten */
+/* Uiteg tekst voor de projecten */
 .fototekst1 {
   text-align: center;
   font-size: 18px;
-  color: white;
   text-decoration: none;
   margin: 10px;
 }
-
 
 /* ervaring images */
 #ervaring img {
@@ -181,7 +194,7 @@ footer {
 
 /* Rounded images */
 img {
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 /* Hidden animation made with javascript */
@@ -194,8 +207,8 @@ img {
   justify-content: space-between;
   gap: 40px;
   padding: 50px;
-  padding-left: 300px;
-  padding-right: 300px;
+  padding-left: 251px;
+  padding-right: 251px;
 }
 
 /* Showed animation made with javascript */
@@ -208,8 +221,8 @@ img {
   justify-content: space-between;
   gap: 40px;
   padding: 50px;
-  padding-left: 300px;
-  padding-right: 300px;
+  padding-left: 250px;
+  padding-right: 250px;
 }
 
 /* Showed animation made with javascript for a different page*/
@@ -249,15 +262,14 @@ img {
   text-align: center;
 }
 
-
-/* Dit is de learnmore button */
+/* Dit is de learnmore button die je ziet bij projecten die je doorstuurt naar de pagina die meer dingen uitlegt over de project */
 .boton-elegante {
   padding: 15px 30px;
   margin-bottom: 20px;
   border: 2px solid #2c2c2c;
   background-color: black;
-  color: #ffffff;
   font-size: 1.2rem;
+  color: white;
   cursor: pointer;
   border-radius: 10px;
   transition: all 0.4s ease;
@@ -267,7 +279,7 @@ img {
   width: 100%;
 }
 
-
+/* Dit is de animatie die je ziet bij de button */
 .boton-elegante::after {
   content: "";
   position: absolute;
@@ -275,29 +287,29 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle,
-      rgba(255, 255, 255, 0.25) 0%,
-      rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
   transform: scale(0);
   transition: transform 0.5s ease;
 }
 
+/* Dit is de hover effect voor de button */
 .boton-elegante:hover::after {
   transform: scale(4);
 }
 
+/* Dit is de hover effect voor de button */
 .boton-elegante:hover {
   border-color: #666666;
   background: #292929;
 }
 
-/* Property dat wordt gebruikt voor de gradient */
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
+/* Animations stuk*/
 
+/* Dit is de animatie wanneer iets van boven komt */
 @keyframes SlideinTop {
   from {
     transform: translateY(-1000px);
@@ -310,6 +322,7 @@ img {
   }
 }
 
+/* Dit is de animatie wanneer iets van rechts komt */
 @keyframes SlideinRight {
   from {
     transform: translateX(-2000px);
@@ -322,6 +335,7 @@ img {
   }
 }
 
+/* Dit is de animatie wanneer iets van links komt */
 @keyframes Slideinleft {
   from {
     scale: 72%;
@@ -336,6 +350,7 @@ img {
   }
 }
 
+/* Dit is de animatie die iets rustig laat zien */
 @keyframes fade {
   from {
     opacity: 0;
@@ -346,6 +361,7 @@ img {
   }
 }
 
+/* Dit is de animatie die iets grooter maakt*/
 @keyframes scale {
   from {
     scale: 50%;
@@ -356,101 +372,106 @@ img {
   }
 }
 
-/* Responsive design */
-@media (max-width: 900px) {
-  .hidden {
-    opacity: 1;
-    transition: none;
-    filter: blur(0px);
-  }
-}
+/* Responsive design stuk*/
 
-@media (max-width: 1150px) {
-
-  .show,
-  .show1,
+/* Dit is zodat componenten niet te klein worden op wat kleinere laptops */
+@media (max-width: 1300px) {
   .hidden {
     padding-left: 200px;
     padding-right: 200px;
-    padding-top: 50px;
-    flex-direction: column;
-    align-items: center;
   }
 
-  #navbar {
-    width: 10%;
+  .show {
+    padding-left: 200px;
+    padding-right: 200px;
   }
-}
 
-@media (max-width: 800px) {
-
-  .show,
-  .show1,
-  .hidden {
-    padding-left: 60px;
-    padding-right: 60px;
+  .show1 {
+    padding-left: 200px;
+    padding-right: 200px;
   }
 }
 
-@media (max-width: 600px) {
-  #foto1 {
-    width: 90%;
-  }
-
-  #koptekst {
-    font-size: 60px;
-  }
-
-  #tekst {
-    width: 90%;
-    text-align: center;
-  }
-
+/* Dit is zodat te font niet te groot wordt */
+@media (max-width: 950px) {
   #stra {
-    font-size: 34px;
+    font-size: 50px;
   }
 
   #tekst1 {
-    font-size: 17px;
+    font-size: 25px;
+  }
+
+  #tekst {
+    padding: 30px;
+  }
+}
+
+/* Dit is voor de telefoon */
+@media (max-width: 700px) {
+  #stra {
+    font-size: 32px;
+  }
+
+  #tekst1 {
+    font-size: 16px;
+  }
+
+  #tekst {
+    padding: 30px;
   }
 
   .linkfoto {
-    margin: 2px;
-    width: 60%;
+    margin: 0px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Dit is voor tablets/kleine laptops */
+@media (max-width: 1100px) {
+  #navbar {
+    display: none;
   }
 
-  .fototekst {
-    font-size: 20px;
+  #koptekst {
+    padding-top: 0px;
   }
 
-  #version {
-    font-size: 15px;
-    padding-top: 1px;
-    padding-right: 5px;
+  #koptekst1 {
+    padding-top: 50px;
   }
 
-  footer {
-    padding-top: 150px;
-    font-size: 12px;
-    padding: 100px;
-    display: flex;
-    justify-content: center;
+  #introfotos {
+    margin-top: 20px;
   }
 
-  .taaljs,
-  .taalcss,
-  .taalhtml {
-    font-size: 15px;
+  .hidden {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
-  .tekstervaring {
-    padding-top: 2px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 2px;
+  .show {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .show1 {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   #ervaring {
-    padding: 8px;
+    padding: 10px;
+  }
+
+  #contact {
+    font-size: 15px;
+  }
+
+  footer {
+    padding: 0px;
+    padding-bottom: 20px;
+    margin-top: 100px;
   }
 }
