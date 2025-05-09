@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strahinja Zoranovic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="images/Profielfoto.jpg" type="image/icon type" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+  <section id="homesection">
+    <h1 id="version"><a href="https://github.com/strahinjazoranovic/Portfolio" target="_blank"  id="version-kleur">V1.49</a></h1>
+    <div id="introductie">
+      <div id="navbar">
+        <a href="#homesection">H</a>
+        <a href="#ervaringsection">S/E</a>
+        <a href="#projectsection">P</a>
+      </div>
+
+      <div id="intro">
+        <h1 id="tekst">
+          <div id="stra">Strahinja Zoranovic</div>
+          <div id="tekst1">Software developer</div>
+          <div id="ervaring">
+            <div id="introfotos">
+              <a target="_blank" href="https://www.linkedin.com/in/strahinja-zoranovic-71a917317/"><img class="linkfoto"
+                  src="images/linkedin.svg" draggable="false" /></a>
+              <br />
+              <a target="_blank" href="https://www.instagram.com/stra.0182/"><img class="linkfoto"
+                  src="images/instagram.svg" draggable="false" /></a>
+              <a target="_blank" href="https://github.com/strahinjazoranovic"><img class="linkfoto" src="images/git.svg"
+                  draggable="false" /></a>
+              <a target="_blank"
+                href=""><img
+                  class="linkfoto" src="images/cv1.jpg" draggable="false" /></a>
+            </div>
+          </div>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <h1 id="koptekst">Skills/Experience</h1>
+  <section id="ervaringsection">
+    <div class="hidden">
+      <div id="ervaring">
+        <img src="images/HTML.webp" draggable="false" />
+        <h1 class="fototekst">HTML</h1>
+      </div>
+
+      <div id="ervaring">
+        <img src="images/CSS.webp" draggable="false" />
+        <h1 class="fototekst">CSS</h1>
+      </div>
+
+      <div id="ervaring">
+        <img src="images/JS.png" style="border-radius: 500px" draggable="false" />
+        <h1 class="fototekst">JavaScript</h1>
+      </div>
+    </div>
+    <div class="hidden">
+      <div id="ervaring">
+        <img src="images/React.png" draggable="false" />
+        <h1 class="fototekst">React</h1>
+      </div>
+
+      <div id="ervaring">
+        <img src="images/nextjs.webp" draggable="false" />
+        <h1 class="fototekst">Next.js</h1>
+      </div>
+    </div>
+  </section>
+
+  <h1 id="koptekst1">Projects</h1>
+  <section id="projectsection">
+    <div class="hidden">
+      <div id="ervaring">
+        <h1 class="fototekst">MetaLoad</h1>
+        <img src="images/metaload.png" alt="MetaLoud" draggable="false" />
+        <div class="tekstervaring">
+          <h1 class="fototekst1">
+            Easy to use loadout website for Call Of Duty Warzone
+          </h1>
+          <a href="metaload.html"><button class="boton-elegante">Learn more</button></a>
+        </div>
+      </div>
+
+      <div id="ervaring">
+        <h1 class="fototekst">Project Eve</h1>
+        <img src="images/Projecteve.png" alt="Project Eve" draggable="false" />
+        <div class="tekstervaring">
+          <h1 class="fototekst1">Simple 2D shooting game</h1>
+          <a href="projecteve.html"><button class="boton-elegante">Learn more</button></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="hidden">
+        <div id="ervaring">
+          <h1 class="fototekst"></h1>
+          <img src="" alt="" draggable="false" />
+          <div class="tekstervaring">
+            <h1 class="fototekst1"></h1>
+            <button class="boton-elegante"></button>
+          </div>
+        </div>
+
+        <div id="ervaring">
+          <h1 class="fototekst"></h1>
+          <img src="" alt="" draggable="false" />
+          <div class="tekstervaring">
+            <h1 class="fototekst1"></h1>
+            <button class="boton-elegante"></button>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <div id="overlay"></div>
+    <div id="contact-form">
+      <div id="header-contact">
+        <img src="icons/back.svg" id="close-contact" draggable="false" />
+        <h2 class="contact-title">Get in touch</h2>
+      </div>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="2c4a7c7e-89b1-49cb-ae64-c875f9bb9a5c">
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="" rows="5"></textarea>
+
+        <button type="submit" class="boton-elegante">Send</button>
+      </form>
+    </div>
+
+    <footer>
+      <div id="content">
+        <button class="contact">Contact me</button>
+        <h3 id="copyright">06 29383846 | ©Strahinja Zoranovic 2025</h3>
+      </div>
+    </footer>
+</body>
+<script src="js/index.js"></script>
+
+</html>
