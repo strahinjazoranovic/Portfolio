@@ -148,9 +148,8 @@ a {
 
 /* Dit is de DIV voor de tekst in projecten */
 .tekstervaring {
-  padding-top: 5px;
-  padding-bottom: 5px;
   margin: 0px;
+  padding: 0px;
 }
 
 /* Navbar */
@@ -213,10 +212,6 @@ a {
   animation: SlideinRight 1.2s;
 }
 
-/* Tekst dat uitlegt waar een project over gaat */
-.tekstervaring {
-  margin-top: 12px;
-}
 
 /* Tekst voor Strahinja Zoranovic die je op de start pagina ziet */
 #stra {
@@ -271,7 +266,7 @@ footer {
 /* Titel voor de projecten */
 .fototekst {
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   text-decoration: none;
   margin: 0px;
 }
@@ -281,8 +276,9 @@ footer {
   text-align: center;
   font-size: 18px;
   text-decoration: none;
-  margin: 10px;
+  margin: 8px 0px 8px 0px;
 }
+
 
 /* ervaring images */
 #ervaring img {
@@ -304,7 +300,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
-  padding: 50px;
+  padding: 25px;
   padding-left: 250px;
   padding-right: 250px;
 }
@@ -318,7 +314,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
-  padding: 50px;
+  padding: 25px;
   padding-left: 250px;
   padding-right: 250px;
 }
@@ -346,7 +342,7 @@ img {
   justify-content: space-between;
   flex: 1 1 100px;
   text-align: center;
-  padding: 10px 20px 10px 20px;
+  padding: 5px 15px 5px 15px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -362,7 +358,7 @@ img {
 
 /* Dit is de learnmore button die je ziet bij projecten die je doorstuurt naar de pagina die meer dingen uitlegt over de project */
 .boton-elegante {
-  padding: 15px 30px;
+  padding: 10px 15px;
   margin-bottom: 5px;
   border: 2px solid #2c2c2c;
   background-color: black;
@@ -377,8 +373,9 @@ img {
   width: 100%;
 }
 
+
 /* Dit is de animatie die je ziet bij de button */
-.boton-elegante::after {
+.boton-elegante::after{
   content: "";
   position: absolute;
   top: 0;
@@ -406,11 +403,11 @@ img {
 
 #talen {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
+  justify-content: space-evenly;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 
@@ -421,6 +418,15 @@ img {
   left: 20px;
   animation: fade 2s;
 }
+
+.link {
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.2s;
+  cursor: pointer;
+  word-break: break-all;
+}
+
 
 /* Animations stuk*/
 
@@ -519,6 +525,12 @@ img {
 
   #tekst {
     padding: 30px;
+  }
+
+  #talen {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 }
 
