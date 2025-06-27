@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strahinja Zoranovic</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/Profielfoto.jpg" type="image/icon type" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body>
+    <section id="homesection">
+      <h1 id="version">
+        <a
+          href="https://github.com/strahinjazoranovic/Portfolio"
+          target="_blank"
+          id="version-kleur"
+          >V1.00</a
+        >
+      </h1>
+      <div id="introductie">
+        <div id="navbar">
+          <a href="#homesection">H</a>
+          <a href="#ervaringsection">S/E</a>
+          <a href="#projectsection">P</a>
+        </div>
+        <div id="intro">
+          <div id="tekst">
+            <div id="stra">Strahinja Zoranovic</div>
+            <div id="tekst1">Software developer</div>
+            <div id="ervaring">
+              <div id="introfotos">
+                <a target="_blank" href="https://github.com/strahinjazoranovic"
+                  ><img class="linkfoto" src="images/git.svg" draggable="false"
+                /></a>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/strahinja-zoranovic-71a917317/"
+                  ><img
+                    class="linkfoto"
+                    src="images/linkedin.svg"
+                    draggable="false"
+                /></a>
+                <a target="_blank" href="https://www.instagram.com/stra.0182/"
+                  ><img
+                    class="linkfoto"
+                    src="images/instagram.svg"
+                    draggable="false"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <h1 id="koptekst">Skills/Experience</h1>
+    <section id="ervaringsection">
+      <div class="hidden">
+        <div id="ervaring">
+          <img src="images/HTML.webp" draggable="false" />
+          <h1 class="fototekst">HTML</h1>
+        </div>
+        <div id="ervaring">
+          <img src="images/CSS.webp" draggable="false" />
+          <h1 class="fototekst">CSS</h1>
+        </div>
+        <div id="ervaring">
+          <img
+            src="images/JS.png"
+            style="border-radius: 500px"
+            draggable="false"
+          />
+          <h1 class="fototekst">JavaScript</h1>
+        </div>
+      </div>
+      <div class="hidden">
+        <div id="ervaring">
+          <img src="images/React.png" draggable="false" />
+          <h1 class="fototekst">React</h1>
+        </div>
+        <div id="ervaring">
+          <img src="images/nextjs.webp" draggable="false" />
+          <h1 class="fototekst">Next.js</h1>
+        </div>
+        <div id="ervaring">
+          <img src="images/MySQL.svg" draggable="false" />
+          <h1 class="fototekst">MySQL</h1>
+        </div>
+      </div>
+    </section>
+
+    <h1 id="koptekst1">Projects</h1>
+    <section id="projectsection">
+      <div class="hidden">
+        <div id="ervaring">
+          <h1 class="fototekst">MetaLoad</h1>
+          <img src="images/metaload.png" alt="MetaLoud" draggable="false" />
+          <div class="tekstervaring">
+            <a
+              href="https://github.com/strahinjazoranovic/MetaLoad"
+              target="_blank"
+            >
+              <button class="boton-elegante">
+                <img
+                  src="/images/github.png"
+                  height="20px"
+                  width="40px"
+                  draggable="false"
+                />
+              </button>
+            </a>
+            <a href="https://meta-load.vercel.app/" target="_blank">
+              <button class="boton-elegante">
+                <h1 class="link">Link naar website</h1>
+              </button>
+            </a>
+          </div>
+        </div>
+        <div id="ervaring">
+          <h1 class="fototekst">HappyQuest</h1>
+          <img src="images/happyquest.png" alt="HappyQuest" draggable="false" />
+          <div class="tekstervaring">
+            <a
+              href="https://github.com/strahinjazoranovic/HappyQuest"
+              target="_blank"
+            >
+              <button class="boton-elegante">
+                <img
+                  src="/images/github.png"
+                  height="20px"
+                  width="40px"
+                  draggable="false"
+                />
+              </button>
+            </a>
+            <a href="https://happy-quest.vercel.app/" target="_blank">
+              <button class="boton-elegante">
+                <h1 class="link">Link naar website</h1>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- This is the dark overlay you get over the page when you click on contact me-->
+    <div id="overlay"></div>
+    <div id="contact-form">
+      <div id="header-contact">
+        <img src="icons/back.svg" id="close-contact" draggable="false" />
+        <h2 class="contact-title">Get in touch</h2>
+      </div>
+      <form action="https://api.web3forms.com/submit" method="POST" id="form1">
+        <input
+          type="hidden"
+          name="access_key"
+          value="2c4a7c7e-89b1-49cb-ae64-c875f9bb9a5c"
+        />
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="" required />
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder=""
+          rows="5"
+        ></textarea>
+        <button type="submit" class="boton-elegante">Send message</button>
+      </form>
+    </div>
+
+    <footer>
+      <div id="content">
+        <button class="contact">Contact me</button>
+        <h3 id="copyright">
+          06 29383846 | ©Strahinja Zoranovic 2025 |
+          strahinja.zoranovic2@gmail.com
+        </h3>
+      </div>
+    </footer>
+    <script src="js/index.js"></script>
+  </body>
+</html>
