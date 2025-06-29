@@ -1,5 +1,3 @@
-/* Dit is de css voor elke website */
-
 /* Main stuk */
 body,
 html {
@@ -24,10 +22,18 @@ html {
   justify-content: center;
   width: 100%;
   max-width: 500px;
-  padding: 2px 20px 5px 20px;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  animation: formFadeIn 0.4s forwards;
 }
 
 #form1 {
@@ -35,7 +41,8 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 16px;
+  width: 100%;
 }
 
 #overlay {
@@ -45,7 +52,9 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   z-index: 1000;
 }
 
@@ -58,62 +67,70 @@ html {
 #header-contact {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 #header-contact img {
   cursor: pointer;
   width: 24px;
   height: 24px;
-  margin-right: 10px;
   padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 #header-contact img:hover {
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .contact-title {
   text-align: center;
-  font-weight: bold;
-  font-size: 24px;
-}
-
-.contact {
-  padding: 10px 15px;
-  margin-bottom: 5px;
-  border: 2px solid #000000;
-  background-color: black;
-  font-size: 1.2rem;
-  color: white;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: all 0.4s ease;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  width: 50%;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  background: linear-gradient(45deg, #7f53ac 0%, #647dee 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
 }
 
 #message {
+  min-height: 120px;
+  resize: vertical;
   margin-bottom: 10px;
 }
 
 #contact-form label {
   align-self: flex-start;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
+  margin-bottom: -8px;
+  color: #333;
 }
 
 #contact-form input,
 #contact-form textarea {
   width: 100%;
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid rgba(200, 200, 200, 0.5);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: border 0.3s, box-shadow 0.3s;
   box-sizing: border-box;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: #7f53ac;
+  box-shadow: 0 2px 10px rgba(127, 83, 172, 0.15);
 }
 
 /* Dit is id voor de versie nummer rechts boven */
@@ -143,9 +160,10 @@ a {
 
 /* Dit is de id voor software developer */
 #tekst1 {
-  font-size: 40px;
-  color: black;
-  margin-bottom: 5px;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  opacity: 0.9;
 }
 
 /* Dit is zodat je niet de scrollbar ziet */
@@ -172,7 +190,7 @@ a {
   height: 96%;
   z-index: 1000;
   animation: Slideinleft 1s;
-  margin-left: 20px;
+  margin-left: 12px;
   margin-top: 12px;
   margin-bottom: 2px;
   border-radius: 25px;
@@ -194,42 +212,66 @@ a {
   font-size: 1.5rem;
   color: #000000;
   background: transparent;
-  transition:
-    background 0.25s cubic-bezier(.4,0,.2,1),
-    color 0.25s cubic-bezier(.4,0,.2,1),
-    box-shadow 0.25s cubic-bezier(.4,0,.2,1),
-    transform 0.25s cubic-bezier(.4,0,.2,1);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   font-weight: 600;
+  transition: all 0.3s;
 }
-
 
 /* Koptekst voor ervaring componenten */
 #koptekst {
-  margin: 0px;
-  padding-top: 150px;
+  position: relative;
+  margin-bottom: 25px;
   text-align: center;
   font-size: 60px;
-  font-weight: extrabold;
+  font-weight: 800;
   animation: fade 2s;
+  display: inline-block;
+  letter-spacing: -0.02em;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Koptekst voor de home pagina */
 #koptekst1 {
-  padding-top: 300px;
-  margin: 0px;
+  position: relative;
+  padding-top: 200px;
+  margin-bottom: 25px;
   text-align: center;
   font-size: 60px;
-  font-weight: extrabold;
+  font-weight: 800;
   animation: fade 2s;
+  display: inline-block;
+  letter-spacing: -0.02em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Shared styles for both headings */
+#koptekst::after,
+#koptekst1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  width: 100px;
+  height: 6px;
+  background: linear-gradient(90deg, #7f53ac, #647dee);
+  transform: translateX(-50%);
+  border-radius: 2px;
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+  animation-delay: 1s;
 }
 
 /* Tekst voor Strahinja Zoranovic die je op de start pagina ziet */
 #stra {
-  font-size: 80px;
-  color: blueviolet;
-  text-align: center;
-  font-weight: bolder;
+  font-size: 5rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #7f53ac 0%, #647dee 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.03em;
 }
 
 /* Center div voor de startscherm */
@@ -245,7 +287,7 @@ a {
 footer {
   padding-left: 50px;
   padding-right: 50px;
-  padding-bottom: 60px;
+  margin-bottom: 120px;
   margin-top: 200px;
   display: flex;
   justify-content: center;
@@ -266,13 +308,12 @@ footer {
   height: 100px;
   width: 100px;
   animation: scale 2s;
-  transition: transform 0.25s cubic-bezier(.4,0,.2,1), box-shadow 0.25s cubic-bezier(.4,0,.2,1);
 }
 
 .linkfoto:hover,
 #navbar a:hover {
   transform: scale(1.08) translateY(-6px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Div voor de icons op de homepage */
@@ -282,24 +323,134 @@ footer {
   justify-content: space-between;
 }
 
-/* Titel voor de projecten */
+/* Titel voor de skils */
 .fototekst {
   text-align: center;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 24px;
   margin: 0px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
-/* ervaring images */
-#ervaring img {
-  max-width: 100%;
-  height: 100%;
+/* Titel voor de projecten */
+.fototekst1 {
+  text-align: center;
+  font-size: 36px;
+  margin: 0px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 /* Rounded images across the site */
 img {
   border-radius: 8px;
-  margin: 5px;
+  margin: 0px;
+}
+
+/* Project Cards Styling */
+.project-card {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  height: 100%;
+}
+
+.project-header {
+  margin-bottom: 12px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tag {
+  background: linear-gradient(
+    135deg,
+    rgba(127, 83, 172, 0.1) 0%,
+    rgba(100, 125, 238, 0.1) 100%
+  );
+  color: #7f53ac;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 300px;
+  min-height: 200px;
+  width: 100%;
+}
+
+.project-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover .project-image-container img {
+  transform: scale(1.05);
+}
+
+.project-description {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.project-links a {
+  flex: 1;
+}
+
+.github-button,
+.website-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px;
+}
+
+.github-button {
+  background: #24292e;
+}
+
+.website-button {
+  background: linear-gradient(45deg, #7f53ac 0%, #647dee 100%);
+}
+
+.imgskils {
+  width: 120px;
+  height: 120px;
+  border-radius: 50px;
+  animation: scale 2s;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Hidden animation made with javascript */
@@ -311,7 +462,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
-  padding: 30px 250px 30px 250px;
+  padding: 30px 10%;
 }
 
 /* Showed animation made with javascript */
@@ -323,42 +474,74 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
-  padding: 30px 250px 30px 250px;
+  padding: 30px 10%;
 }
 
-/* Ervaring */
 #ervaring {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 1 1 100px;
+  flex: 1 1 300px;
   text-align: center;
-  padding: 16px;
-  gap: 16px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 1);
+  padding: 24px;
+  gap: 20px;
+  border-radius: 24px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(0, 0, 0, 0.04) 100%
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(240, 240, 255, 0.15) 100%
   );
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
-  transition: transform 0.25s cubic-bezier(.4,0,.2,1), box-shadow 0.25s cubic-bezier(.4,0,.2,1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+#ervaring::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 18px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(138, 43, 226, 0.6),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: transform 0.5s;
 }
 
 #ervaring:hover {
   transform: scale(1.04);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: rgba(138, 43, 226, 0.2);
 }
 
-.link:hover {
+#navbar:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  border-color: rgba(138, 43, 226, 0.2);
+}
+
+#ervaring:hover::before {
+  transform: translateX(100%);
+}
+
+#ervaring img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+  border-radius: 12px;
+}
+
+#ervaring:hover .fototekst,
+#ervaring:hover .fototekst1 {
   color: blueviolet;
-  text-decoration: underline;
-  letter-spacing: 1px;
-  transition: color 0.2s, letter-spacing 0.2s;
 }
 
 /* Copyright tekst in de footer */
@@ -368,79 +551,72 @@ img {
 
 /* Dit is de learnmore button die je ziet bij projecten die je doorstuurt naar de pagina die meer dingen uitlegt over de project */
 .boton-elegante {
-  padding: 12px;
+  padding: 8px;
   margin-bottom: 10px;
-  border: 2px solid #000000;
-  background-color: black;
-  font-size: 1.2rem;
-  color: white;
+  border: none;
+  background: black;
+  font-size: 13px;
+  color: #ffffff;
   cursor: pointer;
-  border-radius: 10px;
-  transition: all 0.4s ease;
+  border-radius: 12px;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.22s cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
   position: relative;
   overflow: hidden;
   width: 100%;
 }
 
-/* Dit is de animatie die je ziet bij de button */
-.boton-elegante::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: (rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
-  transform: scale(0);
-  transition: transform 0.5s ease;
-}
-
-/* Dit is de hover effect voor de button */
-.boton-elegante:hover::after {
-  transform: scale(4);
-}
-
-/* Dit is de hover effect voor de button */
-.boton-elegante:hover,
-.contact:hover {
-  transform: translateY(-3px);
-}
-
-#talen {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 10px 0;
-  padding: 20px 30px;
-  background: rgba(255, 255, 255, 0.18);
-  border-radius: 20px;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(255, 255, 255, 0.35);
-  transition: box-shadow 0.3s;
-}
-
-#backbutton {
-  display: none;
-  position: absolute;
-  top: 50px;
-  left: 20px;
-  animation: fade 2s;
-}
-
-.link {
-  font-size: 18px;
-  font-weight: bold;
-  transition: color 0.2s;
+.contact {
+  position: fixed;
+  bottom: 48px;
+  right: 48px;
+  z-index: 800;
+  width: auto;
+  min-width: 160px;
+  padding: 14px 28px;
+  margin-bottom: 0;
+  border-radius: 12px;
+  font-size: 24px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: none;
+  color: black;
+  border: none;
   cursor: pointer;
-  word-break: break-all;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-/* Animations stuk*/
+.contact:hover,
+.boton-elegante:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.13);
+}
 
-/* Dit is de animatie wanneer iets van boven komt */
+.contact:active,
+.boton-elegante:active {
+  transform: scale(1.04);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
 @keyframes SlideinTop {
   from {
     transform: translateY(-1000px);
@@ -452,7 +628,6 @@ img {
   }
 }
 
-/* Dit is de animatie wanneer iets van rechts komt */
 @keyframes SlideinRight {
   from {
     transform: translateX(-2000px);
@@ -464,11 +639,10 @@ img {
   }
 }
 
-/* Dit is de animatie wanneer iets van links komt */
 @keyframes Slideinleft {
   from {
     scale: 72%;
-    transform: translateX(-100px);
+    transform: translateX(-200px);
     filter: blur(10px);
   }
   to {
@@ -478,122 +652,170 @@ img {
   }
 }
 
-/* Dit is de animatie die iets rustig laat zien */
 @keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale {
+  from { scale: 50%; }
+  to { scale: 100%; }
+}
+
+@keyframes fadeIn {
   from {
     opacity: 0;
+    width: 0px;
   }
   to {
     opacity: 1;
+    width: 240px;
   }
 }
 
-/* Dit is de animatie die iets grooter maakt*/
-@keyframes scale {
+@keyframes formFadeIn {
   from {
-    scale: 50%;
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
   }
   to {
-    scale: 100%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
-/* Responsive design stuk*/
-
-/* Dit is zodat componenten niet te klein worden op wat kleinere laptops */
-@media (max-width: 1300px) {
-  .hidden {
-    padding-left: 200px;
-    padding-right: 200px;
-  }
-  .show {
-    padding-left: 200px;
-    padding-right: 200px;
-  }
-  .show1 {
-    padding-left: 200px;
-    padding-right: 200px;
-  }
-}
-
-/* Dit is zodat te font niet te groot wordt */
-@media (max-width: 950px) {
-  #stra {
-    font-size: 50px;
-  }
-  #tekst1 {
-    font-size: 25px;
-  }
-  #tekst {
-    padding: 30px;
-  }
-  #talen {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-}
-
-/* Dit is voor de telefoon */
+/* Responsive design */
 @media (max-width: 700px) {
-  #stra {
-    font-size: 32px;
+  #navbar { display: none; }
+  
+  .project-image-container { height: 200px; }
+  .project-content { flex-direction: column; }
+  
+  #koptekst, #koptekst1 {
+    font-size: 40px;
+    padding-top: 60px;
   }
-  #tekst1 {
-    font-size: 16px;
+  
+  #tekst { padding: 10px; }
+  
+  #introfotos {
+    justify-content: center;
+    gap: 20px;
   }
-  #tekst {
-    padding: 30px;
+  
+  .fototekst { font-size: 22px; }
+  .fototekst1 { font-size: 40px; }
+  
+  .hidden, .show {
+    padding: 20px 8%;
+    gap: 30px;
   }
+  
+  footer {
+    margin-top: 60px;
+    padding-bottom: 70px;
+  }
+  
+  .boton-elegante {
+    width: 100%;
+    padding: 6px;
+    font-size: 10px;
+  }
+  
+  #copyright { font-size: 18px; }
+  
+  #stra { font-size: 36px; }
+  
   .linkfoto {
     margin: 0px;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
+  
+  #tekst1 { font-size: 20px; }
+  
+  /* Form responsive adjustments */
   #contact-form {
-    width: 80%;
+    width: 85%;
+    padding: 25px 20px;
+    max-width: none;
   }
-  .contact {
-    width: 90%;
+  
+  .contact-title { font-size: 24px; }
+  
+  #form1 { gap: 12px; }
+  
+  #contact-form input,
+  #contact-form textarea {
+    padding: 10px 14px;
+    font-size: 14px;
   }
-  #copyright {
-    font-size: 16px;
+  
+  #form1 button {
+    padding: 12px 20px;
+    font-size: 15px;
   }
 }
 
-/* Dit is voor tablets/kleine laptops */
-@media (max-width: 1100px) {
-  #navbar {
-    display: none;
-    animation: fade 2s;
+@media (min-width: 701px) and (max-width: 900px) {
+  #stra { font-size: 52px; }
+  
+  .linkfoto {
+    margin: 0px;
+    width: 100px;
+    height: 100px;
   }
-  #backbutton {
-    display: block;
+  
+  #tekst1 { font-size: 26px; }
+}
+
+@media (min-width: 701px) and (max-width: 1100px) {
+  #koptekst { padding-top: 30px; }
+  
+  .project-image-container { height: 250px; }
+  
+  #navbar { display: none; }
+  
+  #koptekst1 { padding-top: 80px; }
+  
+  .hidden, .show {
+    padding: 30px 7%;
+    gap: 30px;
   }
-  #koptekst {
-    padding-top: 0px;
+  
+  #ervaring {
+    flex: 1 1 45%;
+    min-width: 280px;
   }
-  #koptekst1 {
-    padding-top: 50px;
+  
+  .contact {
+    right: 40px;
+    bottom: 40px;
   }
-  .hidden {
-    padding-left: 40px;
-    padding-right: 40px;
+  
+  img {
+    max-width: 100%;
+    height: auto;
   }
-  .show {
-    padding-left: 40px;
-    padding-right: 40px;
+  
+  #imgskils {
+    width: 100px;
+    height: 100px;
   }
-  .show1 {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  #contact {
-    font-size: 15px;
-  }
-  footer {
-    padding: 0px;
-    padding-bottom: 20px;
-    margin-top: 100px;
-  }
+}
+
+@media (min-width: 1101px) and (max-width: 1500px) {
+  .hidden, .show { padding: 30px 12%; }
+  
+  #ervaring { flex: 1 1 300px; }
+  
+  .fototekst { font-size: 24px; }
+  
+  .fototekst1 { font-size: 36px; }
+}
+
+@media (min-width: 1501px) {
+  .hidden, .show { padding: 30px 10%; }
+  
+  #ervaring { flex: 1 1 350px; }
 }

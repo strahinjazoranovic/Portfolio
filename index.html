@@ -19,13 +19,13 @@
           href="https://github.com/strahinjazoranovic/Portfolio"
           target="_blank"
           id="version-kleur"
-          >V1.02</a
+          >V1.03</a
         >
       </h1>
       <div id="introductie">
         <div id="navbar">
           <a href="#homesection">H</a>
-          <a href="#ervaringsection">S/E</a>
+          <a href="#ervaringsection">E</a>
           <a href="#projectsection">P</a>
         </div>
         <div id="intro">
@@ -58,15 +58,15 @@
       </div>
     </section>
 
-    <h1 id="koptekst">Skills/Experience</h1>
+    <h1 id="koptekst">Experience</h1>
     <section id="ervaringsection">
       <div class="hidden">
         <div id="ervaring">
-          <img src="images/HTML.webp" draggable="false" />
+          <img src="images/HTML.webp" draggable="false" class="imgskils" />
           <h1 class="fototekst">HTML</h1>
         </div>
         <div id="ervaring">
-          <img src="images/CSS.webp" draggable="false" />
+          <img src="images/CSS.webp" draggable="false" class="imgskils" />
           <h1 class="fototekst">CSS</h1>
         </div>
         <div id="ervaring">
@@ -74,21 +74,22 @@
             src="images/JS.png"
             style="border-radius: 500px"
             draggable="false"
+            class="imgskils"
           />
           <h1 class="fototekst">JavaScript</h1>
         </div>
       </div>
       <div class="hidden">
         <div id="ervaring">
-          <img src="images/React.png" draggable="false" />
+          <img src="images/React.png" draggable="false" class="imgskils" />
           <h1 class="fototekst">React</h1>
         </div>
         <div id="ervaring">
-          <img src="images/nextjs.webp" draggable="false" />
+          <img src="images/nextjs.webp" draggable="false" class="imgskils" />
           <h1 class="fototekst">Next.js</h1>
         </div>
         <div id="ervaring">
-          <img src="images/MySQL.svg" draggable="false" />
+          <img src="images/MySQL.svg" draggable="false" class="imgskils" />
           <h1 class="fototekst">MySQL</h1>
         </div>
       </div>
@@ -97,50 +98,85 @@
     <h1 id="koptekst1">Projects</h1>
     <section id="projectsection">
       <div class="hidden">
-        <div id="ervaring">
-          <h1 class="fototekst">MetaLoad</h1>
-          <img src="images/metaload.png" alt="MetaLoud" draggable="false" />
-          <div class="tekstervaring">
+        <div id="ervaring" class="project-card">
+          <div class="project-header">
+            <h1 class="fototekst1">MetaLoad</h1>
+            <div class="project-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">mySQL</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-image-container">
+              <img src="images/metaload.png" alt="MetaLoad" draggable="false" />
+            </div>
+            <p class="project-description">
+              A modern web application for loading and sharing Call of Duty
+              Warzone Loadouts.
+            </p>
+          </div>
+          <div class="project-links">
             <a
               href="https://github.com/strahinjazoranovic/MetaLoad"
               target="_blank"
             >
-              <button class="boton-elegante">
+              <button class="boton-elegante github-button">
                 <img
                   src="images/github.png"
                   height="20px"
-                  width="40px"
+                  width="20px"
                   draggable="false"
                 />
+                <span>View Code</span>
               </button>
             </a>
             <a href="https://meta-load.vercel.app/" target="_blank">
-              <button class="boton-elegante">
-                <h1 class="link">Link naar website</h1>
+              <button class="boton-elegante website-button">
+                <span>Live Demo</span>
               </button>
             </a>
           </div>
         </div>
-        <div id="ervaring">
-          <h1 class="fototekst">HappyQuest</h1>
-          <img src="images/happyquest.png" alt="HappyQuest" draggable="false" />
-          <div class="tekstervaring">
+        <div id="ervaring" class="project-card">
+          <div class="project-header">
+            <h1 class="fototekst1">HappyQuest</h1>
+            <div class="project-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">mySQL</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-image-container">
+              <img
+                src="images/happyquest.png"
+                alt="HappyQuest"
+                draggable="false"
+              />
+            </div>
+            <p class="project-description">
+              A streamlined task management app that enables parents to create
+              activities for children while allowing kids to track completion
+              and earn rewards.
+            </p>
+          </div>
+          <div class="project-links">
             <a
               href="https://github.com/strahinjazoranovic/HappyQuest"
               target="_blank"
             >
-              <button class="boton-elegante">
+              <button class="boton-elegante github-button">
                 <img
                   src="images/github.png"
                   height="20px"
-                  width="40px"
+                  width="20px"
                   draggable="false"
                 />
+                <span>View Code</span>
               </button>
             </a>
             <a href="https://happy-quest.vercel.app/" target="_blank">
-              <button class="boton-elegante">
-                <h1 class="link">Link naar website</h1>
+              <button class="boton-elegante website-button">
+                <span>Live Demo</span>
               </button>
             </a>
           </div>
@@ -180,8 +216,8 @@
       <div id="content">
         <button class="contact">Contact me</button>
         <h3 id="copyright">
-          06 29383846 | ©Strahinja Zoranovic 2025 |
-          strahinja.zoranovic2@gmail.com
+          06 29383846 | strahinja.zoranovic2@gmail.com | ©Strahinja Zoranovic
+          2025
         </h3>
       </div>
     </footer>
