@@ -12,7 +12,6 @@ const observer = new IntersectionObserver((entries, observer) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
-
 const contactForm = document.getElementById("contact-form");
 const overlay = document.getElementById("overlay");
 const contactButton = document.querySelector(".contact");
@@ -37,4 +36,4 @@ overlay.addEventListener("click", () => {
   contactForm.style.display = "none";
   overlay.classList.remove("active");
   document.body.style.overflow = "";
-})
+});

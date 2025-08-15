@@ -9,6 +9,11 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
+/* Dit is zodat je niet de scrollbar ziet */
+::-webkit-scrollbar {
+  display: none;
+}
+
 /* Contact form container */
 #contact-form {
   display: none;
@@ -24,18 +29,19 @@ html {
   max-width: 500px;
   padding: 30px;
   border-radius: 24px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.5);
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0.3) 0%,
     rgba(255, 255, 255, 0.3) 100%
   );
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
   animation: formFadeIn 0.4s forwards;
 }
 
+/* Contact form content */
 #form1 {
   display: flex;
   flex-direction: column;
@@ -45,6 +51,7 @@ html {
   width: 100%;
 }
 
+/* Overlay for the contact form */
 #overlay {
   display: none;
   position: fixed;
@@ -52,9 +59,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(7px);
   z-index: 1000;
 }
 
@@ -64,6 +69,7 @@ html {
   display: flex;
 }
 
+/* Header for the contact form */
 #header-contact {
   display: flex;
   align-items: center;
@@ -72,20 +78,24 @@ html {
   margin-bottom: 10px;
 }
 
+/* Close button for the contact form */
 #header-contact img {
   cursor: pointer;
   width: 24px;
   height: 24px;
   padding: 10px;
   border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Close button hover effect */
 #header-contact img:hover {
-  transform: translateY(-3px) scale(1.05);
+  transform: translateY(-4px) scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Contact form title */
 .contact-title {
   text-align: center;
   font-weight: 700;
@@ -98,12 +108,14 @@ html {
   margin: 0;
 }
 
+/* Contact form input fields */
 #message {
   min-height: 120px;
   resize: vertical;
   margin-bottom: 10px;
 }
 
+/* Labels for the contact form */
 #contact-form label {
   align-self: flex-start;
   font-size: 16px;
@@ -112,6 +124,7 @@ html {
   color: #333;
 }
 
+/* Contact form input and textarea styles */
 #contact-form input,
 #contact-form textarea {
   width: 100%;
@@ -126,6 +139,7 @@ html {
   box-sizing: border-box;
 }
 
+/* Contact form input focus styles */
 #contact-form input:focus,
 #contact-form textarea:focus {
   outline: none;
@@ -133,7 +147,7 @@ html {
   box-shadow: 0 2px 10px rgba(127, 83, 172, 0.15);
 }
 
-/* Dit is id voor de versie nummer rechts boven */
+/* Version number */
 #version {
   text-align: end;
   padding-top: 5px;
@@ -143,7 +157,13 @@ html {
   animation: Slideinleft 0.8s;
 }
 
+/* Version number color */
 #version-kleur {
+  color: blueviolet;
+}
+
+#version:hover {
+  text-decoration: underline;
   color: blueviolet;
 }
 
@@ -153,22 +173,17 @@ a {
   color: black;
 }
 
-/* Dit is de id voor de introductie tekst */
+/* Introductie tekst */
 #tekst {
   text-align: center;
 }
 
-/* Dit is de id voor software developer */
+/* Software developer text */
 #tekst1 {
   font-size: 1.8rem;
   letter-spacing: 1px;
   margin-bottom: 12px;
   opacity: 0.9;
-}
-
-/* Dit is zodat je niet de scrollbar ziet */
-::-webkit-scrollbar {
-  display: none;
 }
 
 /* Dit is de DIV voor de tekst in projecten */
@@ -201,6 +216,7 @@ a {
   transition: box-shadow 0.3s, background 0.3s, border 0.3s;
 }
 
+/* Navbar links */
 #navbar a {
   display: flex;
   align-items: center;
@@ -234,7 +250,7 @@ a {
 /* Koptekst voor de home pagina */
 #koptekst1 {
   position: relative;
-  padding-top: 200px;
+  padding-top: 140px;
   margin-bottom: 25px;
   text-align: center;
   font-size: 60px;
@@ -326,10 +342,9 @@ footer {
 /* Titel voor de skils */
 .fototekst {
   text-align: center;
-  font-size: 24px;
-  margin: 0px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02 em;
 }
 
 /* Titel voor de projecten */
@@ -350,12 +365,8 @@ img {
 /* Project Cards Styling */
 .project-card {
   display: grid;
-  grid-template-rows: auto auto 1fr auto;
-  height: 100%;
-}
-
-.project-header {
-  margin-bottom: 12px;
+  grid-template-rows: auto auto auto;
+  height: 540px;
 }
 
 .project-tags {
@@ -366,6 +377,10 @@ img {
   margin-top: 8px;
 }
 
+.project-header {
+  margin-bottom: 12px;
+}
+
 .tag {
   background: linear-gradient(
     135deg,
@@ -373,23 +388,23 @@ img {
     rgba(100, 125, 238, 0.1) 100%
   );
   color: #7f53ac;
-  padding: 4px 8px;
+  padding: 6px 8px;
   border-radius: 6px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
 }
 
 .project-content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  padding: 0 12px;
 }
 
 .project-image-container {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  height: 300px;
+  margin-bottom: 12px;
   min-height: 200px;
   width: 100%;
 }
@@ -410,7 +425,7 @@ img {
   color: #555;
   font-size: 14px;
   line-height: 1.5;
-  margin: 0;
+  margin: 8px;
 }
 
 .project-links {
@@ -444,6 +459,7 @@ img {
 .imgskils {
   width: 120px;
   height: 120px;
+  margin-bottom: 12px;
   border-radius: 50px;
   animation: scale 2s;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
@@ -477,18 +493,40 @@ img {
   padding: 30px 10%;
 }
 
+
+/* Project section */
 #ervaring {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   flex: 1 1 300px;
   text-align: center;
   padding: 24px;
-  gap: 20px;
+  gap: 14px;
   border-radius: 24px;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(240, 240, 255, 0.15) 100%
+  );
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+/* Ervaring section */
+#ervaringsection #ervaring {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1 1 300px;
+  text-align: center;
+  padding: 120px 24px;
+  gap: 14px;
+  border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: linear-gradient(
     135deg,
@@ -539,10 +577,6 @@ img {
   border-radius: 12px;
 }
 
-#ervaring:hover .fototekst,
-#ervaring:hover .fototekst1 {
-  color: blueviolet;
-}
 
 /* Copyright tekst in de footer */
 #copyright {
@@ -551,7 +585,7 @@ img {
 
 /* Dit is de learnmore button die je ziet bij projecten die je doorstuurt naar de pagina die meer dingen uitlegt over de project */
 .boton-elegante {
-  padding: 8px;
+  padding: 12px;
   margin-bottom: 10px;
   border: none;
   background: black;
@@ -588,7 +622,7 @@ img {
   -webkit-backdrop-filter: blur(8px);
   background: none;
   color: black;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
   font-family: inherit;
   font-weight: 600;
@@ -653,13 +687,21 @@ img {
 }
 
 @keyframes fade {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scale {
-  from { scale: 50%; }
-  to { scale: 100%; }
+  from {
+    scale: 50%;
+  }
+  to {
+    scale: 100%;
+  }
 }
 
 @keyframes fadeIn {
@@ -686,71 +728,95 @@ img {
 
 /* Responsive design */
 @media (max-width: 700px) {
-  #navbar { display: none; }
-  
-  .project-image-container { height: 200px; }
-  .project-content { flex-direction: column; }
-  
-  #koptekst, #koptekst1 {
+  #navbar {
+    display: none;
+  }
+
+  .project-image-container {
+    height: 200px;
+  }
+  .project-content {
+    flex-direction: column;
+  }
+
+  #koptekst,
+  #koptekst1 {
     font-size: 40px;
     padding-top: 60px;
   }
-  
-  #tekst { padding: 10px; }
-  
+
+  #tekst {
+    padding: 10px;
+  }
+
   #introfotos {
     justify-content: center;
     gap: 20px;
   }
-  
-  .fototekst { font-size: 22px; }
-  .fototekst1 { font-size: 40px; }
-  
-  .hidden, .show {
+
+  .fototekst {
+    font-size: 22px;
+  }
+  .fototekst1 {
+    font-size: 40px;
+  }
+
+  .hidden,
+  .show {
     padding: 20px 8%;
     gap: 30px;
   }
-  
+
   footer {
     margin-top: 60px;
     padding-bottom: 70px;
   }
-  
+
   .boton-elegante {
     width: 100%;
     padding: 6px;
     font-size: 10px;
   }
-  
-  #copyright { font-size: 18px; }
-  
-  #stra { font-size: 36px; }
-  
+
+  #copyright {
+    font-size: 18px;
+  }
+
+  #stra {
+    font-size: 36px;
+  }
+
   .linkfoto {
     margin: 0px;
     width: 80px;
     height: 80px;
   }
-  
-  #tekst1 { font-size: 20px; }
-  
+
+  #tekst1 {
+    font-size: 20px;
+  }
+
   /* Form responsive adjustments */
   #contact-form {
     width: 85%;
     padding: 25px 20px;
     max-width: none;
   }
-  
-  .contact-title { font-size: 24px; }
-  
-  #form1 { gap: 12px; }
-  
+
+  .contact-title {
+    font-size: 24px;
+  }
+
+  #form1 {
+    gap: 12px;
+  }
+
   #contact-form input,
   #contact-form textarea {
     padding: 10px 14px;
     font-size: 14px;
   }
-  
+
   #form1 button {
     padding: 12px 20px;
     font-size: 15px;
@@ -758,46 +824,59 @@ img {
 }
 
 @media (min-width: 701px) and (max-width: 900px) {
-  #stra { font-size: 52px; }
-  
+  #stra {
+    font-size: 52px;
+  }
+
   .linkfoto {
     margin: 0px;
     width: 100px;
     height: 100px;
   }
-  
-  #tekst1 { font-size: 26px; }
+
+  #tekst1 {
+    font-size: 26px;
+  }
 }
 
 @media (min-width: 701px) and (max-width: 1100px) {
-  #koptekst { padding-top: 30px; }
-  
-  .project-image-container { height: 250px; }
-  
-  #navbar { display: none; }
-  
-  #koptekst1 { padding-top: 80px; }
-  
-  .hidden, .show {
+  #koptekst {
+    padding-top: 30px;
+  }
+
+  .project-image-container {
+    height: 250px;
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  #koptekst1 {
+    padding-top: 80px;
+  }
+
+  .hidden,
+  .show {
     padding: 30px 7%;
     gap: 30px;
   }
-  
+
   #ervaring {
     flex: 1 1 45%;
     min-width: 280px;
   }
-  
+
   .contact {
     right: 40px;
     bottom: 40px;
   }
-  
+
   img {
     max-width: 100%;
     height: auto;
   }
-  
+
   #imgskils {
     width: 100px;
     height: 100px;
@@ -805,17 +884,31 @@ img {
 }
 
 @media (min-width: 1101px) and (max-width: 1500px) {
-  .hidden, .show { padding: 30px 12%; }
-  
-  #ervaring { flex: 1 1 300px; }
-  
-  .fototekst { font-size: 24px; }
-  
-  .fototekst1 { font-size: 36px; }
+  .hidden,
+  .show {
+    padding: 30px 12%;
+  }
+
+  #ervaring {
+    flex: 1 1 300px;
+  }
+
+  .fototekst {
+    font-size: 24px;
+  }
+
+  .fototekst1 {
+    font-size: 36px;
+  }
 }
 
 @media (min-width: 1501px) {
-  .hidden, .show { padding: 30px 10%; }
-  
-  #ervaring { flex: 1 1 350px; }
+  .hidden,
+  .show {
+    padding: 30px 10%;
+  }
+
+  #ervaring {
+    flex: 1 1 350px;
+  }
 }
