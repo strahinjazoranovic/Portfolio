@@ -214,6 +214,11 @@ a {
   border: 2px solid rgba(255, 255, 255, 1);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
   transition: box-shadow 0.3s, background 0.3s, border 0.3s;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(240, 240, 255, 0.1) 100%
+  );
 }
 
 /* Navbar links */
@@ -250,7 +255,6 @@ a {
 /* Koptekst voor de home pagina */
 #koptekst1 {
   position: relative;
-  padding-top: 140px;
   margin-bottom: 25px;
   text-align: center;
   font-size: 60px;
@@ -457,9 +461,9 @@ img {
 }
 
 .imgskils {
-  width: 120px;
-  height: 120px;
-  margin-bottom: 12px;
+  width: 140px;
+  height: 140px;
+  margin: 12px;
   border-radius: 50px;
   animation: scale 2s;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
@@ -493,7 +497,6 @@ img {
   padding: 30px 10%;
 }
 
-
 /* Project section */
 #ervaring {
   position: relative;
@@ -516,6 +519,47 @@ img {
   overflow: hidden;
 }
 
+.scroll-container {
+  max-width: 1800px;
+  overflow: hidden;
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroll-list {
+  display: flex;
+  flex-wrap: nowrap;
+  min-width: 200%;
+  width: max-content;
+  animation: scroll 24s linear infinite;
+  animation-timing-function: linear;
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroll-list > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  margin: 0 16px;
+  padding: 18px 8px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+  transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+  box-shadow: 0 2px 8px rgba(127, 83, 172, 0.06);
+  cursor: pointer;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Ervaring section */
 #ervaringsection #ervaring {
   position: relative;
@@ -525,17 +569,12 @@ img {
   flex: 1 1 300px;
   text-align: center;
   padding: 120px 24px;
+  margin-bottom: 40px;
   gap: 14px;
   border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.5) 0%,
-    rgba(240, 240, 255, 0.15) 100%
-  );
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
+  pointer-events: none;
 }
 
 #ervaring::before {
@@ -576,7 +615,6 @@ img {
   transition: transform 0.3s;
   border-radius: 12px;
 }
-
 
 /* Copyright tekst in de footer */
 #copyright {
