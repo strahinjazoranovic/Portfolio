@@ -6,7 +6,7 @@ html {
   background: whitesmoke;
   color: black;
   font-family: "Lexend", sans-serif;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
 section {
