@@ -1,12 +1,25 @@
 /* Main stuk */
 body,
 html {
-  scroll-behavior: smooth;
-  margin: 0px;
+  margin: 0px 0px 50px 0px;
   padding: 0px;
   background: whitesmoke;
   color: black;
-  font-family: "Poppins", sans-serif;
+  font-family: "Lexend", sans-serif;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: center;
+  height: auto;
+}
+
+/* Font import from Google */
+.lexend-uniquifier {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Dit is zodat je niet de scrollbar ziet */
@@ -86,12 +99,12 @@ html {
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s, box-shadow 0.3s;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
 }
 
 /* Close button hover effect */
 #header-contact img:hover {
-  transform: translateY(-4px) scale(1.05);
+  transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -133,12 +146,11 @@ html {
   font-family: inherit;
   border: 1px solid rgba(200, 200, 200, 0.5);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: border 0.3s, box-shadow 0.3s;
   box-sizing: border-box;
 }
-
 
 /* Contact form input focus styles */
 #contact-form input:focus,
@@ -155,7 +167,7 @@ html {
   padding-right: 20px;
   margin: 0px;
   font-size: 24px;
-  animation: Slideinleft 0.8s;
+  animation: SlideinLeft 1s;
 }
 
 /* Version number color */
@@ -205,21 +217,19 @@ a {
   width: 100px;
   height: 96%;
   z-index: 1000;
-  animation: Slideinleft 1s;
+  animation: SlideinLeft 1s;
   margin-left: 12px;
   margin-top: 12px;
   margin-bottom: 2px;
   border-radius: 25px;
-  backdrop-filter: blur(14px) saturate(140%);
-  -webkit-backdrop-filter: blur(14px) saturate(140%);
   border: 2px solid rgba(255, 255, 255, 1);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
-  transition: box-shadow 0.3s, background 0.3s, border 0.3s;
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.1) 0%,
     rgba(240, 240, 255, 0.1) 100%
   );
+  will-change: opacity, transform;
 }
 
 /* Navbar links */
@@ -308,24 +318,9 @@ a {
   align-items: center;
   justify-content: center;
   height: 85vh;
+  margin-bottom: 15px;
   animation: SlideinTop 1s;
-}
-
-/* Footer onderaan de pagina */
-footer {
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-bottom: 120px;
-  margin-top: 200px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  font-size: 18px;
-  animation: bigger linear;
-  animation-timeline: view();
-  animation-range: entry 0;
+  will-change: opacity, transform;
 }
 
 /* Voor de icons op de start pagina */
@@ -372,6 +367,10 @@ footer {
 img {
   border-radius: 8px;
   margin: 0px;
+}
+
+/* image for the about me section(moet nog komen)*/
+.imgprofielfoto {
 }
 
 /* Project Cards Styling */
@@ -456,16 +455,6 @@ img {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 100%;
-  padding: 10px;
-}
-
-.github-button {
-  background: #24292e;
-}
-
-.website-button {
-  background: linear-gradient(45deg, #7f53ac 0%, #647dee 100%);
 }
 
 .imgskils {
@@ -485,12 +474,13 @@ img {
 .hidden {
   opacity: 0;
   filter: blur(12px);
-  transition: all 1.5s;
+  transition: all 1.6s;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
-  padding: 30px 10%;
+  padding: 30px 13%;
+  will-change: opacity, transform;
 }
 
 /* Showed animation made with javascript */
@@ -502,10 +492,10 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
-  padding: 30px 10%;
+  padding: 30px 13%;
+  will-change: opacity, transform;
 }
 
-/* Project section from #ervaring */
 #ervaring {
   position: relative;
   display: flex;
@@ -542,6 +532,39 @@ img {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   pointer-events: none;
+}
+
+/* About section from #about */
+#aboutsection #about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 300px;
+  text-align: center;
+  padding: 12px 72px;
+  border-radius: 24px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(240, 240, 255, 0.15) 100%
+  );
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.abouttekst {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+#bold-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: #7f53ac;
 }
 
 #ervaring::before {
@@ -622,6 +645,7 @@ img {
 /* Copyright tekst in de footer */
 #copyright {
   text-align: center;
+  font-size: 22px;
 }
 
 /* Dit is de learnmore button die je ziet bij projecten die je doorstuurt naar de pagina die meer dingen uitlegt over de project */
@@ -646,23 +670,21 @@ img {
 
 .contact {
   position: fixed;
-  bottom: 48px;
-  right: 48px;
+  bottom: 50px;
+  right: 40px;
   z-index: 800;
   width: auto;
-  min-width: 160px;
+  min-width: 166px;
   padding: 14px 28px;
-  margin-bottom: 0;
   border-radius: 12px;
   font-size: 24px;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   background: none;
   color: black;
   border: 1px solid rgba(255, 255, 255, 0.5);
   cursor: pointer;
+  font-weight: 500;
   font-family: inherit;
-  font-weight: 600;
-  letter-spacing: 0.5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
   transition: box-shadow 0.22s cubic-bezier(0.4, 0, 0.2, 1),
     transform 0.18s cubic-bezier(0.4, 0, 0.2, 1),
@@ -671,12 +693,14 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
+  will-change: transform, opacity;
+  animation: SlideinContact 0.8s;
 }
 
 .contact:hover,
 .boton-elegante:hover {
   transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .contact:active,
@@ -688,36 +712,45 @@ img {
 /* Animations */
 @keyframes SlideinTop {
   from {
-    transform: translateY(-1000px);
-    filter: blur(10px);
+    transform: translateY(-1000px) scale(0.5);
+    opacity: 0;
   }
   to {
-    filter: blur(0px);
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+    opacity: 1;
   }
 }
 
 @keyframes SlideinRight {
   from {
     transform: translateX(-2000px);
-    filter: blur(10px);
+    opacity: 0;
   }
   to {
-    filter: blur(0px);
+    opacity: 1;
     transform: translateX(0);
   }
 }
 
-@keyframes Slideinleft {
+@keyframes SlideinLeft {
   from {
-    scale: 72%;
-    transform: translateX(-200px);
-    filter: blur(10px);
+    transform: translateX(-250px) scale(0.5);
+    opacity: 0;
   }
   to {
-    scale: 100%;
-    filter: blur(0px);
-    transform: translateX(0);
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes SlideinContact {
+  from {
+    transform: translateX(500px) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
   }
 }
 
@@ -727,15 +760,6 @@ img {
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }
 
@@ -773,6 +797,33 @@ img {
 }
 
 /* Responsive design */
+
+/* For responsive text*/
+@media (max-width: 1250px) {
+  .abouttekst {
+    font-size: 14px;
+  }
+
+  #bold-text {
+    font-size: 18px;
+  }
+
+  #copyright {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 780px) {
+  #aboutsection #about {
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #copyright {
+    font-size: 12px;
+  }
+}
 
 /* Responsive design for phones */
 @media (max-width: 500px) {
@@ -821,15 +872,6 @@ img {
     font-size: 38px;
   }
 
-  footer {
-    margin-top: 60px;
-    padding-bottom: 70px;
-  }
-
-  #copyright {
-    font-size: 18px;
-  }
-
   #stra {
     font-size: 36px;
   }
@@ -874,7 +916,7 @@ img {
   }
 
   #ervaring {
-    padding: 12px 16px;
+    padding: 8px 12px;
   }
 }
 
@@ -914,31 +956,5 @@ img {
   #imgskils {
     width: 100px;
     height: 100px;
-  }
-}
-
-/* Responsive design for large laptops and desktops */
-@media (min-width: 1101px) and (max-width: 1500px) {
-  #ervaring {
-    flex: 1 1 300px;
-  }
-
-  .fototekst {
-    font-size: 24px;
-  }
-
-  .fototekst1 {
-    font-size: 36px;
-  }
-}
-
-@media (min-width: 1501px) {
-  .hidden,
-  .show {
-    padding: 30px 10%;
-  }
-
-  #ervaring {
-    flex: 1 1 350px;
   }
 }
