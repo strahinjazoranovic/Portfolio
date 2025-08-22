@@ -6,7 +6,7 @@ html {
   background: whitesmoke;
   color: black;
   font-family: "Lexend", sans-serif;
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
 }
 
 section {
@@ -335,7 +335,7 @@ a {
 
 .linkfoto:hover,
 #navbar a:hover {
-  transform: scale(1.08) translateY(-6px);
+  transform: scale(1.10);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -369,9 +369,10 @@ img {
   margin: 0px;
 }
 
-/* image for the about me section(moet nog komen)*/
+/* image for the about me section(moet nog komen)
 .imgprofielfoto {
 }
+*/
 
 /* Project Cards Styling */
 .project-card {
@@ -604,7 +605,7 @@ img {
 .scroll-container {
   max-width: 1800px;
   overflow: hidden;
-  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
 }
 
 .scroll-list {
@@ -614,7 +615,7 @@ img {
   width: max-content;
   animation: scroll 24s linear infinite;
   animation-timing-function: linear;
-  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
 }
 
 .scroll-list > div {
@@ -798,6 +799,14 @@ img {
 
 /* Responsive design */
 
+/* Disable scroll snap on smaller screens */
+@media (max-width: 1100px) {
+  body,
+  html {
+    scroll-snap-type: none;
+  }
+}
+
 /* For responsive text*/
 @media (max-width: 1250px) {
   .abouttekst {
@@ -854,6 +863,11 @@ img {
 @media (max-width: 700px) {
   .project-content {
     flex-direction: column;
+  }
+
+  .show,
+  .hidden {
+    padding: 30px 7%;
   }
 
   #tekst {
@@ -941,6 +955,11 @@ img {
 @media (min-width: 701px) and (max-width: 1100px) {
   .project-image-container {
     height: 260px;
+  }
+
+  .show,
+  .hidden {
+    padding: 30px 10%;
   }
 
   #ervaring {
