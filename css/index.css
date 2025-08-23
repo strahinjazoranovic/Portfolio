@@ -14,14 +14,6 @@ section {
   height: auto;
 }
 
-/* Font import from Google */
-.lexend-uniquifier {
-  font-family: "Lexend", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
 /* Dit is zodat je niet de scrollbar ziet */
 ::-webkit-scrollbar {
   display: none;
@@ -50,7 +42,7 @@ section {
     rgba(255, 255, 255, 0.3) 100%
   );
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-  animation: formFadeIn 0.4s forwards;
+  animation: formFadeIn 0.3s forwards;
 }
 
 /* Contact form content */
@@ -167,7 +159,7 @@ section {
   padding-right: 20px;
   margin: 0px;
   font-size: 24px;
-  animation: SlideinLeft 1s;
+  animation: SlideinLeft 0.8s;
 }
 
 /* Version number color */
@@ -217,7 +209,7 @@ a {
   width: 100px;
   height: 96%;
   z-index: 1000;
-  animation: SlideinLeft 1s;
+  animation: SlideinLeft 0.8s;
   margin-left: 12px;
   margin-top: 12px;
   margin-bottom: 2px;
@@ -344,7 +336,7 @@ a {
   justify-content: center;
   height: 85vh;
   margin-bottom: 15px;
-  animation: SlideinTop 1s;
+  animation: SlideinTop 0.8s;
   will-change: opacity, transform;
 }
 
@@ -355,7 +347,6 @@ a {
   margin-right: 10px;
   height: 100px;
   width: 100px;
-  animation: scale 1.2s;
 }
 
 .linkfoto:hover,
@@ -488,7 +479,6 @@ img {
   height: 140px;
   margin: 12px;
   border-radius: 50px;
-  animation: scale 1.2s;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
@@ -720,7 +710,7 @@ img {
   justify-content: center;
   text-align: center;
   will-change: transform, opacity;
-  animation: SlideinContact 0.8s;
+  animation: SlideinContact 0.6s;
 }
 
 .contact:hover,
@@ -786,15 +776,6 @@ img {
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes scale {
-  from {
-    scale: 50%;
-  }
-  to {
-    scale: 100%;
   }
 }
 
@@ -994,10 +975,5 @@ img {
   .contact {
     right: 40px;
     bottom: 40px;
-  }
-
-  #imgskils {
-    width: 100px;
-    height: 100px;
   }
 }
