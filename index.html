@@ -8,14 +8,18 @@
       name="description"
       content="Strahinja Zoranovic, Software developer from Serbia"
     />
+    <meta name="author" content="Strahinja Zoranovic" />
+    <link rel="canonical" href="http://strah.nl/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Lexend&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <link rel="icon" href="images/Profielfoto.jpg" type="image/icon type" />
     <link rel="stylesheet" href="css/index.css?v=13" />
+    <link rel="icon" href="images/Profielfoto.jpg" type="image/jpeg" />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-4JJ1XP4RHF"
@@ -26,7 +30,7 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", "G-4JJ1XP4RHF");
+      gtag("config", "G-4JJ1XP4RHF", { anonymize_ip: true });
     </script>
   </head>
 
@@ -37,14 +41,16 @@
           href="https://github.com/strahinjazoranovic/Portfolio"
           target="_blank"
           id="version-kleur"
-          >V1.5.4</a
+          >V1.5.5</a
         >
       </h1>
       <div id="introductie">
         <div id="navbar">
           <a href="#homesection"><span class="tooltip">Home</span>H</a>
           <a href="#aboutsection"><span class="tooltip">About me</span>A</a>
-          <a href="#ervaringsection"><span class="tooltip">Experience</span>E</a>
+          <a href="#ervaringsection"
+            ><span class="tooltip">Experience</span>E</a
+          >
           <a href="#projectsection"><span class="tooltip">Projects</span>P</a>
         </div>
         <div id="intro">
