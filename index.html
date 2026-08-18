@@ -6,26 +6,29 @@
     <title>Strahinja Zoranovic</title>
     <meta
       name="description"
-      content="Strahinja Zoranovic, Software developer from Serbia"
+      content="Strahinja Zoranovic - Software Developer"
     />
     <meta name="author" content="Strahinja Zoranovic" />
-    <link rel="canonical" href="http://strah.nl/" />
-    <!-- Open Graph Meta Tags for Social Sharing -->
+    <link rel="canonical" href="https://portfolio-topaz-xi-84.vercel.app/" />
+
     <meta
       property="og:title"
       content="Strahinja Zoranovic - Software Developer"
     />
     <meta
       property="og:description"
-      content="Strahinja Zoranovic, Software developer from Serbia."
+      content="Strahinja Zoranovic - Software Developer"
     />
     <meta
       property="og:image"
-      content="http://strah.nl/images/Profielfoto.jpg"
+      content="https://portfolio-topaz-xi-84.vercel.app/images/logos/logo.jpg"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://strah.nl/" />
-    <!-- Twitter Card Meta Tags -->
+    <meta
+      property="og:url"
+      content="https://portfolio-topaz-xi-84.vercel.app/"
+    />
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
@@ -33,25 +36,23 @@
     />
     <meta
       name="twitter:description"
-      content="Strahinja Zoranovic, Software developer from Serbia. Explore my portfolio and projects."
+      content="Strahinja Zoranovic, Explore my portfolio and projects."
     />
     <meta
       name="twitter:image"
-      content="http://strah.nl/images/Profielfoto.jpg"
+      content="https://portfolio-topaz-xi-84.vercel.app/images/logos/logo.jpg"
     />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Lexend&display=swap"
-      as="style"
-      onload="
-        this.onload = null;
-        this.rel = 'stylesheet';
-      "
+      href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/index.css?v=14" />
-    <link rel="icon" href="images/Profielfoto.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="/css/index.css" />
+
+    <link rel="icon" href="/images/logos/logo.jpg" type="image/jpeg" />
+
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-4JJ1XP4RHF"
@@ -65,394 +66,583 @@
       gtag("config", "G-4JJ1XP4RHF", { anonymize_ip: true });
     </script>
   </head>
-
   <body>
-    <section id="homesection">
-      <h1 id="version">
-        <a
-          href="https://github.com/strahinjazoranovic/Portfolio"
-          target="_blank"
-          id="version-kleur"
-          >V1.5.7.1</a
-        >
-      </h1>
-      <div id="introductie">
-        <div id="navbar">
-          <a href="#homesection"><span class="tooltip">Home</span>H</a>
-          <a href="#aboutsection"><span class="tooltip">About me</span>A</a>
-          <a href="#ervaringsection"
-            ><span class="tooltip">Experience</span>E</a
-          >
-          <a href="#projectsection"><span class="tooltip">Projects</span>P</a>
-        </div>
-        <div id="intro">
-          <div id="tekst">
-            <div id="stra">Strahinja Zoranovic</div>
-            <div id="tekst1">Software developer</div>
-            <div id="ervaring">
-              <div id="introfotos">
-                <a target="_blank" href="https://github.com/strahinjazoranovic"
-                  ><img
-                    class="linkfoto"
-                    src="images/git.svg"
-                    draggable="false"
-                    alt="GitHub"
-                    loading="lazy"
-                  />
-                </a>
-                <a
-                  target="_blank"
-                  href="https://www.linkedin.com/in/strahinja-zoranovic-71a917317/"
-                  ><img
-                    class="linkfoto"
-                    src="images/linkedin.svg"
-                    draggable="false"
-                    alt="LinkedIn"
-                    loading="lazy"
-                /></a>
-                <a target="_blank" href="https://www.instagram.com/stra.0182/"
-                  ><img
-                    class="linkfoto"
-                    src="images/instagram.svg"
-                    draggable="false"
-                    alt="Instagram"
-                    loading="lazy"
-                /></a>
-              </div>
+    <section id="frontSection">
+      <div id="frontDiv" class="hidden">
+        <div>
+          <h1 id="frontSign">Hi, I am</h1>
+          <h1 id="frontHeader">Strahinja Zoranovic</h1>
+          <h1 id="frontRole">Software developer</h1>
+          <div id="frontCard">
+            <div id="frontContainer">
+              <button
+                type="button"
+                class="navbarButtonLeft"
+                aria-label="Open experience"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-left-icon lucide-arrow-left"
+                >
+                  <path d="m12 19-7-7 7-7" />
+                  <path d="M19 12H5" />
+                </svg>
+                <span>Experience</span>
+              </button>
+              <a
+                class="navbarButtonCenter"
+                aria-label="Open projects"
+                href="#bottomSection"
+              >
+                <span>Contact</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-down-icon lucide-arrow-down"
+                >
+                  <path d="M12 5v14" />
+                  <path d="m19 12-7 7-7-7" />
+                </svg>
+              </a>
+              <button
+                type="button"
+                class="navbarButtonRight"
+                aria-label="Open projects"
+              >
+                <span>Projects</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-right-icon lucide-arrow-right"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+            <div id="frontContainerMobile">
+              <button
+                type="button"
+                class="navbarButtonLeft"
+                aria-label="Open experience"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-left-icon lucide-arrow-left"
+                >
+                  <path d="m12 19-7-7 7-7" />
+                  <path d="M19 12H5" />
+                </svg>
+                <span>Experience</span>
+              </button>
+              <button
+                type="button"
+                class="navbarButtonRight"
+                aria-label="Open projects"
+              >
+                <span>Projects</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-right-icon lucide-arrow-right"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </button>
+              <a
+                class="navbarButtonCenter"
+                aria-label="Open projects"
+                href="#bottomSection"
+              >
+                <span>Contact</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-down-icon lucide-arrow-down"
+                >
+                  <path d="M12 5v14" />
+                  <path d="m19 12-7 7-7-7" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="aboutsection">
-      <h1 id="koptekst">About me</h1>
-      <div class="hidden">
-        <div id="about">
-          <h1 class="abouttekst">
-            <span id="bold-text"
-              >I am a 17-year-old software developer from Serbia</span
+    <section id="leftSection" aria-label="Experience">
+      <div class="leftTitle">
+        <h2>Experience</h2>
+        <button
+          id="leftCloseButton"
+          type="button"
+          aria-label="Close experience"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M18 8L22 12L18 16"></path>
+            <path d="M2 12H22"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="leftContent">
+        <div class="leftCard hidden">
+          <h1>Frameworks</h1>
+
+          <div class="leftContainer">
+            <div class="leftItem">
+              <h1>Next.js</h1>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+                alt="Next.js logo"
+                class="leftImg"
+                draggable="false"
+              />
+            </div>
+
+            <div class="leftItem">
+              <h1>Laravel</h1>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
+                alt="Laravel logo"
+                class="leftImg"
+                draggable="false"
+              />
+            </div>
+
+            <div class="leftItem">
+              <h1>React</h1>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                alt="React logo"
+                class="leftImg"
+                draggable="false"
+              />
+            </div>
+          </div>
+
+          <h1>Languages</h1>
+
+          <div class="leftContainer">
+            <div class="leftItem">
+              <h1>TypeScript</h1>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                alt="TypeScript logo"
+                class="leftImg"
+                draggable="false"
+              />
+            </div>
+
+            <div class="leftItem">
+              <h1>JavaScript</h1>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                alt="JavaScript logo"
+                class="leftImg"
+                draggable="false"
+              />
+            </div>
+
+            <div class="leftItem">
+              <h1>CSS</h1>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                alt="CSS logo"
+                class="leftImg"
+                draggable="false"
+              />
+            </div>
+
+            <div class="leftItem">
+              <h1>PHP</h1>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+                alt="PHP logo"
+                class="leftImg"
+                draggable="false"
+              />
+            </div>
+
+            <div class="leftItem">
+              <h1>MySQL</h1>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                alt="MySQL logo"
+                class="leftImg"
+                draggable="false"
+              />
+            </div>
+          </div>
+
+          <h1>Tools</h1>
+
+          <div class="leftContainer">
+            <div class="leftItem">
+              <h1>Git</h1>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                alt="Git logo"
+                class="leftImg"
+                draggable="false"
+              />
+            </div>
+
+            <div class="leftItem">
+              <h1>Figma</h1>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                alt="Figma logo"
+                class="leftImg"
+                draggable="false"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rightSection" aria-label="Projects">
+      <div class="rightTitle">
+        <button id="rightCloseButton" type="button" aria-label="Close projects">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M6 8L2 12L6 16"></path>
+            <path d="M2 12H22"></path>
+          </svg>
+        </button>
+        <h1>Projects</h1>
+      </div>
+      <div class="rightCenter">
+        <div class="carousel">
+          <button id="leftDot" type="button" aria-label="Previous project">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m15 18-6-6 6-6"></path>
+            </svg>
+          </button>
+
+          <div class="rightContent">
+            <div class="carouselTrack">
+              <div class="carouselSlide hidden">
+                <article class="projectCard">
+                  <div class="projectHeader">
+                    <h2 class="projectTitle">MetaLoad</h2>
+                    <div class="projectTech">
+                      <span>Developed with</span>
+                      <p class="projectTechnologies">Next.js</p>
+                    </div>
+                  </div>
+
+                  <img
+                    src="/images/metaLoadLanding.png"
+                    alt="MetaLoad preview"
+                    class="projectImage"
+                    draggable="false"
+                    loading="lazy"
+                  />
+
+                  <p class="projectDescription">
+                    Loadout-sharing platform designed to make creating and
+                    sharing Call of Duty loadouts easier.
+                  </p>
+
+                  <a
+                    target="_blank"
+                    href="https://github.com/strahinjazoranovic/MetaLoad"
+                    class="buttonFullWidth"
+                  >
+                    Learn more about this project
+                  </a>
+                </article>
+              </div>
+
+              <div class="carouselSlide hidden">
+                <article class="projectCard">
+                  <div class="projectHeader">
+                    <h2 class="projectTitle">HappyQuest</h2>
+                    <div class="projectTech">
+                      <span>Developed with</span>
+                      <p class="projectTechnologies">Next.js</p>
+                    </div>
+                  </div>
+
+                  <img
+                    src="/images/happyQuestLanding.png"
+                    alt="HappyQuest preview"
+                    class="projectImage"
+                    draggable="false"
+                    loading="lazy"
+                  />
+
+                  <p class="projectDescription">
+                    Task application designed for parents and children to foster
+                    positive habits and engagement.
+                  </p>
+
+                  <a
+                    target="_blank"
+                    href="https://github.com/strahinjazoranovic/HappyQuest"
+                    class="buttonFullWidth"
+                  >
+                    Learn more about this project
+                  </a>
+                </article>
+              </div>
+
+              <div class="carouselSlide hidden">
+                <article class="projectCard">
+                  <div class="projectHeader">
+                    <h2 class="projectTitle">Portify</h2>
+                    <div class="projectTech">
+                      <span>Developed with</span>
+                      <p class="projectTechnologies">Laravel</p>
+                    </div>
+                  </div>
+
+                  <img
+                    src="/images/portifyLanding.png"
+                    alt="Portify preview"
+                    class="projectImage"
+                    draggable="false"
+                    loading="lazy"
+                  />
+
+                  <p class="projectDescription">
+                    Project management portal that lets admins manage projects,
+                    files with direct message functionality.
+                  </p>
+
+                  <a
+                    target="_blank"
+                    href="https://github.com/strahinjazoranovic/Portify"
+                    class="buttonFullWidth"
+                  >
+                    Learn more about this project
+                  </a>
+                </article>
+              </div>
+
+              <div class="carouselSlide hidden">
+                <article class="projectCard">
+                  <div class="projectHeader">
+                    <h2 class="projectTitle">CybersecuritySRS</h2>
+                    <div class="projectTech">
+                      <span>Developed with</span>
+                      <p class="projectTechnologies">Next.js</p>
+                    </div>
+                  </div>
+
+                  <img
+                    src="/images/cybersecuritySRS.png"
+                    alt="CybersecuritySRS preview"
+                    class="projectImage"
+                    draggable="false"
+                    loading="lazy"
+                  />
+
+                  <p class="projectDescription">
+                    A web-based system, developed to enable secure, encrypted,
+                    and efficient file sharing between users.
+                  </p>
+
+                  <a
+                    target="_blank"
+                    href="https://github.com/redarbib/cybersecuritySRS"
+                    class="buttonFullWidth"
+                  >
+                    Learn more about this project
+                  </a>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <button id="rightDot" type="button" aria-label="Next project">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m9 18 6-6-6-6"></path>
+            </svg>
+          </button>
+
+          <div id="dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bottomSection">
+      <div id="bottomCard" class="hidden">
+        <div id="splitter">
+          <h2 class="contactTitle">About me</h2>
+          <p class="aboutText">
+            <span id="aboutTextSpan"
+              >Hi, I am an 18 year old junior software developer from
+              Serbia</span
             >
             <br />
             currently residing in the Netherlands and studying at MBO Rijnland.
             I have a passion for creating innovative web applications and I'm
             always eager to learn new technologies.
-          </h1>
-          <p class="abouttekst">
-            My journey into software development started when my dad gave me my
-            first gaming computer. I was fascinated by how games worked and soon
-            became curious about how I could create something of my own. That
-            curiosity led me to programming, and over the past year I’ve built
-            skills in multiple languages and frameworks. Today, I focus on
-            creating user-friendly and efficient applications that put the user
-            first.
           </p>
-          <h2 id="copyright">
-            06 29383846 | strahinja.zoranovic2@gmail.com | ©Strahinja Zoranovic
-            2026
-          </h2>
-          <!-- hier moet een profielfoto komen
-          <img
-            src="images/"
-            alt=""
-            draggable="false"
-            class="imgprofielfoto"
-            loading="lazy"
-          />
-        --></div>
-      </div>
-    </section>
-
-    <section id="ervaringsection">
-      <h1 id="koptekst">Experience</h1>
-      <div class="hidden">
-        <div class="scroll-container">
-          <div id="ervaring" class="scroll-list">
-            <div title="HTML: Markup language for web pages">
-              <img
-                src="images/HTML.webp"
-                draggable="false"
-                class="imgskils"
-                alt="HTML"
-                loading="lazy"
-              />
-              <h1 class="fototekst">HTML</h1>
-            </div>
-            <div title="CSS: Styling for web pages">
-              <img
-                src="images/CSS.webp"
-                draggable="false"
-                class="imgskils"
-                alt="CSS"
-                loading="lazy"
-              />
-              <h1 class="fototekst">CSS</h1>
-            </div>
-            <div title="JavaScript: Programming language for web">
-              <img
-                src="images/JS.png"
-                style="border-radius: 500px"
-                draggable="false"
-                class="imgskils"
-                alt="JavaScript"
-                loading="lazy"
-              />
-              <h1 class="fototekst">JavaScript</h1>
-            </div>
-            <div title="React: JavaScript library for UI">
-              <img
-                src="images/React.png"
-                draggable="false"
-                class="imgskils"
-                alt="React"
-                loading="lazy"
-              />
-              <h1 class="fototekst">React</h1>
-            </div>
-            <div title="Next.js: React framework">
-              <img
-                src="images/nextjs.webp"
-                draggable="false"
-                class="imgskils"
-                alt="Next.js"
-                loading="lazy"
-              />
-              <h1 class="fototekst">Next.js</h1>
-            </div>
-            <div title="MySQL: Database system">
-              <img
-                src="images/MySQL.svg"
-                draggable="false"
-                class="imgskils"
-                alt="MySQL"
-                loading="lazy"
-              />
-              <h1 class="fototekst">MySQL</h1>
-            </div>
-            <div title="Supabase: Backend as a service">
-              <img
-                src="images/Supabase.jpg"
-                draggable="false"
-                class="imgskils"
-                alt="Supabase"
-                style="border-radius: 520px"
-                loading="lazy"
-              />
-              <h1 class="fototekst">Supabase</h1>
-            </div>
-            <!-- Duplicated items for seamless scroll -->
-            <div title="HTML: Markup language for web pages">
-              <img
-                src="images/HTML.webp"
-                draggable="false"
-                class="imgskils"
-                alt="HTML"
-                loading="lazy"
-              />
-              <h1 class="fototekst">HTML</h1>
-            </div>
-            <div title="CSS: Styling for web pages">
-              <img
-                src="images/CSS.webp"
-                draggable="false"
-                class="imgskils"
-                alt="CSS"
-                loading="lazy"
-              />
-              <h1 class="fototekst">CSS</h1>
-            </div>
-            <div title="JavaScript: Programming language for web">
-              <img
-                src="images/JS.png"
-                style="border-radius: 500px"
-                draggable="false"
-                class="imgskils"
-                alt="JavaScript"
-                loading="lazy"
-              />
-              <h1 class="fototekst">JavaScript</h1>
-            </div>
-            <div title="React: JavaScript library for UI">
-              <img
-                src="images/React.png"
-                draggable="false"
-                class="imgskils"
-                alt="React"
-                loading="lazy"
-              />
-              <h1 class="fototekst">React</h1>
-            </div>
-            <div title="Next.js: React framework">
-              <img
-                src="images/nextjs.webp"
-                draggable="false"
-                class="imgskils"
-                alt="Next.js"
-                loading="lazy"
-              />
-              <h1 class="fototekst">Next.js</h1>
-            </div>
-            <div title="MySQL: Database system">
-              <img
-                src="images/MySQL.svg"
-                draggable="false"
-                class="imgskils"
-                alt="MySQL"
-                loading="lazy"
-              />
-              <h1 class="fototekst">MySQL</h1>
-            </div>
-            <div title="Supabase: Backend as a service">
-              <img
-                src="images/Supabase.jpg"
-                draggable="false"
-                class="imgskils"
-                alt="Supabase"
-                style="border-radius: 500px"
-                loading="lazy"
-              />
-              <h1 class="fototekst">Supabase</h1>
-            </div>
-          </div>
+          <p class="aboutParagraph">
+            My journey into software development started when my dad gave me my
+            first computer. I was fascinated by how games worked and soon became
+            curious about how I could create something of my own. That curiosity
+            led me to programming, and over the past year I've built skills in
+            multiple languages and frameworks. As of today, I focus on creating
+            user-friendly websites.
+          </p>
         </div>
-      </div>
-    </section>
 
-    <section id="projectsection">
-      <h1 id="koptekst1">Projects</h1>
-      <div class="hidden">
-        <div id="ervaring" class="project-card">
-          <div class="project-header">
-            <h1 class="fototekst1">Portify</h1>
-            <div class="project-tags">
-              <span class="tag">Laravel</span>
-              <span class="tag">SQLite</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-image-container">
-              <img
-                src="images/portify.webp"
-                alt="Portify"
-                draggable="false"
-                loading="lazy"
-                style="height: 220px; object-fit: cover"
-              />
-            </div>
-            <p class="project-description">
-              Project management portal
-            </p>
-          </div>
-          <div class="project-links">
+        <div id="contactForm1">
+          <h2 class="contactTitle">Get in touch</h2>
+          <div id="contactInfoContainer">
             <a
-              href="https://github.com/strahinjazoranovic/Portify"
-              target="_blank"
+              class="contactButton"
+              href="mailto:strahinja.zoranovic2@gmail.com"
             >
-              <button class="boton-elegante github-button">
-                <img
-                  src="images/github.png"
-                  height="16px"
-                  width="16px"
-                  draggable="false"
-                  loading="lazy"
-                />
-                <span>View Code</span>
-              </button>
+              <div>
+                <svg
+                  class="contactImg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                </svg>
+                <span>strahinja.zoranovic2@gmail.com</span>
+              </div>
             </a>
-            <a href="" target="_blank">
-              <button class="boton-elegante website-button">
-                <span>Live Demo</span>
-              </button>
-            </a>
-          </div>
-        </div>
-        <div id="ervaring" class="project-card">
-          <div class="project-header">
-            <h1 class="fototekst1">HappyQuest</h1>
-            <div class="project-tags">
-              <span class="tag">Next.js</span>
-              <span class="tag">Supabase</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-image-container">
-              <img
-                src="images/happyquest.png"
-                alt="HappyQuest"
-                draggable="false"
-                loading="lazy"
-              />
-            </div>
-            <p class="project-description">
-              A streamlined task management app
-            </p>
-          </div>
-          <div class="project-links">
             <a
-              href="https://github.com/strahinjazoranovic/HappyQuest"
+              class="contactButton"
               target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/strahinja-zoranovic-71a917317/"
             >
-              <button class="boton-elegante github-button">
+              <div>
                 <img
-                  src="images/github.png"
-                  height="16px"
-                  width="16px"
+                  class="contactImg"
+                  src="/images/logos/linkedin.svg"
+                  alt="Linkedin"
                   draggable="false"
-                  loading="lazy"
                 />
-                <span>View Code</span>
-              </button>
+                <span>Linkedin</span>
+              </div>
             </a>
-            <a href="https://happy-quest.vercel.app/" target="_blank">
-              <button class="boton-elegante website-button">
-                <span>Live Demo</span>
-              </button>
+            <a
+              class="contactButton"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/strahinjazoranovic"
+            >
+              <div>
+                <img
+                  class="contactImg"
+                  src="/images/logos/github.png"
+                  alt="Github"
+                  draggable="false"
+                />
+                <span>Github</span>
+              </div>
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- This is the dark overlay you get over the page when you click on contact me-->
-    <div id="overlay"></div>
-    <div id="contact-form">
-      <div id="header-contact">
-        <img src="images/back.svg" id="close-contact" draggable="false" />
-        <h2 class="contact-title">Get in touch</h2>
-      </div>
-      <form action="https://api.web3forms.com/submit" method="POST" id="form1">
-        <input
-          type="hidden"
-          name="access_key"
-          value="2c4a7c7e-89b1-49cb-ae64-c875f9bb9a5c"
-        />
-        <label for="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder=""
-          minlength="2"
-          pattern="[A-Za-z]+"
-          required
-        />
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="" required />
-        <label for="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          placeholder=""
-          minlength="10"
-          rows="5"
-        ></textarea>
-        <button type="submit" class="boton-elegante">Send message</button>
-      </form>
-    </div>
-
-    <div id="content">
-      <button class="contact">Contact me</button>
-    </div>
-    <script src="js/index.js"></script>
+    <script src="/js/index.js" defer></script>
   </body>
 </html>
