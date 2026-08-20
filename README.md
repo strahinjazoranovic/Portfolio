@@ -12,9 +12,7 @@ This site was built using plain HTML, CSS and JavaScript
 
 ## Visit
 
-Check out the live portfolio at:
-
-[Link to portfolio](https://portfolio-snowy-eta-bcyhaqhf9g.vercel.app/)
+Check out the live portfolio at: https://portfolio-snowy-eta-bcyhaqhf9g.vercel.app/
 
 ---
 
