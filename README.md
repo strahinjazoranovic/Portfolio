@@ -14,7 +14,7 @@ This site was built using plain HTML, CSS and JavaScript
 
 Check out the live portfolio at:
 
-**https://portfolio-topaz-xi-84.vercel.app/**
+[Link to portfolio](https://portfolio-snowy-eta-bcyhaqhf9g.vercel.app/)
 
 ---
 
