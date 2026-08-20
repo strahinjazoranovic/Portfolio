@@ -1154,7 +1154,7 @@ img {
 }
 
 /* Prefer reduced motion */
-/* @media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
@@ -1174,4 +1174,4 @@ img {
   .carouselTrack {
     transition: none;
   }
-} */
+}
